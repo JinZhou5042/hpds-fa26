@@ -54,7 +54,7 @@ If you have a technical question that could be of interest to others, please pos
 Each assignment will require that you evaluate your work in multiple locations,
 so as to consider the effects of different hardware.  We assume that you have
 access to a laptop or workstation in the CSE department as a starting point.
-In addition, you must request accounts at these two facilities <b>during the first week of class** so as to be able to use them throughout the semester.
+In addition, you must request accounts at these two facilities **during the first week of class** so as to be able to use them throughout the semester.
 
 - [Notre Dame Center for Research Computing (CRC)](https://docs.crc.nd.edu) - Our local campus facility which provess a shared cluster accessible of CPUs and GPUs through SLURM or HTCondor along with parallel storage capability.  This is easy to get started with, and generally has plenty of capacity available early in the semester.  **Beware: The cluster tends to become highly utilized with long wait times during the last few weeks of the semester.**
 - [NSF ACCESS Cyberinfrastructure](https://access-ci.org) - A national federation of computing facilities accessible through a common interface.  Students should request an EXPLORE allocation and initially request access to the Purdue Anvil facility as a common starting point.  Shifting to other facilities during the semester to explore what is available is encouraged. 
@@ -129,7 +129,7 @@ that consistently demonstrates insight, curiosity, and quality.
 
 As a student at Notre Dame, you are bound by the [Academic Code of Honor](http://honorcode.nd.edu), which states:
 
-<quote>As a member of the Notre Dame community, I acknowledge that it is my responsibility to learn and abide by principles of intellectual honesty and academic integrity, and therefore I will not participate in or tolerate academic dishonesty.</quote>
+> As a member of the Notre Dame community, I acknowledge that it is my responsibility to learn and abide by principles of intellectual honesty and academic integrity, and therefore I will not participate in or tolerate academic dishonesty.
 
 In this class, that means that any work that bears your name is the result of your own efforts.
 (Or where group work is permitted, the members of that group.)  You must construct your own code, run your own
