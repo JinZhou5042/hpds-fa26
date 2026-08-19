@@ -56,12 +56,12 @@ so as to consider the effects of different hardware.  We assume that you have
 access to a laptop or workstation in the CSE department as a starting point.
 In addition, you must request accounts at these two facilities **during the first week of class** so as to be able to use them throughout the semester.
 
-- [Notre Dame Center for Research Computing (CRC)](https://docs.crc.nd.edu) - Our local campus facility which provess a shared cluster accessible of CPUs and GPUs through SLURM or HTCondor along with parallel storage capability.  This is easy to get started with, and generally has plenty of capacity available early in the semester.  **Beware: The cluster tends to become highly utilized with long wait times during the last few weeks of the semester.**
+- [Notre Dame Center for Research Computing (CRC)](https://docs.crc.nd.edu) - Our local campus facility which provess a shared cluster accessible of CPUs and GPUs through SLURM or HTCondor along with parallel storage capability.  This is easy to get started with, and generally has plenty of capacity available early in the semester.  **Beware:** The cluster tends to become highly utilized with long wait times during the last few weeks of the semester.
 - [NSF ACCESS Cyberinfrastructure](https://access-ci.org) - A national federation of computing facilities accessible through a common interface.  Students should request an EXPLORE allocation and initially request access to the Purdue Anvil facility as a common starting point.  Shifting to other facilities during the semester to explore what is available is encouraged. 
 
 ## How to Get the Most Out of this Course
 
-First, our scheduled class time is for the purpose of **talking to each other** and **developing community**.
+First, our scheduled class time is for the purpose of **talking to each other** and developing community.
 Most classes, I will plan to lecture for about half of the time, and then transition to discussion.
 You should commit to attending every class, but please send me a note if your are absent for an important
 reason such as doctor appointment, conference travel, etc.
@@ -76,7 +76,7 @@ Second, this class is built on the idea that you are a **motivated and independe
 
 - **Key Principles** - In class, I will give a high level overview of the hardware and software concepts that form the organizing principles of a particular topic, such as multicore programming, cluster architecture, distributed functions, etc.
 - **Tech Intro** - There may be multiple technologies that exhibit these principles.  I will pick *one* widely used technology in each area (e.g. OpenMP, CUDA, HTCondor), and give you a practical introduction showing how to get started, run some example codes, perform some common transformations, and measure performance.
-- **Deep Dive** - Out of class, you will dig deeply into technology and learn **more than was shown in the intro** by reading manuals, looking up tutorials, writing code, and trying out new features.  You will certainly have to solve some unexpected problems by puzzling over error messages and trying different approaches.  Be curious, creative, and persistent!
+- **Deep Dive** - Out of class, you will dig deeply into the technology and learn more than was shown in class by reading manuals, looking up tutorials, writing code, and trying out new features.  You will certainly have to solve some unexpected problems by puzzling over error messages and trying different approaches.  Be curious, creative, and persistent!
 - **Report Back** - The assignments will be somewhat open-ended, so that you can show us what you have learned.
 Demonstrate that you have understood the principles, and then also show that you have found or created new ideas and approaches.
 Each student will sign up for one "demo days" in which you make a short presentation to the class of a technique
@@ -86,10 +86,12 @@ or example that you have worked out yourself.
 
 Assignments are generally due at 5PM on the date indicated.
 
+**Careful:** Do not expect to complete assignments in a single sitting on the due date.  Expect that every assignment will involve unexpected errors, queueing delays, troubleshooting, and discussion.  Start early, so that these matters can be spread over several days.
+
 You are permitted **one free late pass** to account for the ordinary circumstances of
-life, such as a minor illness, schedule conflict, etc.  To do so, just send an email to the TA **before the deadline**, saying briefly "I would like to take a late pass on assignment X".
+life, such as a minor illness, schedule conflict, etc.  To do so, just email/slack the TA before the deadline, saying briefly "I would like to take a late pass on assignment X".
 And the due date for that item will be extended by seven calendar days.
-(Naturally, you can't use a late pass on the exams, the final presentation, or the final project.))
+(Naturally, you can't use a late pass on the exams, the final presentation, or the final project.)
 
 Beyond that, exceptions will only be made for serious circumstances
 such as a hospitalization, death in the family,
