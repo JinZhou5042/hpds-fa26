@@ -11,7 +11,7 @@ title: Syllabus
 
 ## Course Web Page
 
-[https://dthain.github.io/hpdc-fa26](https://dthain.github.io/hpds-fa26)
+[https://dthain.github.io/hpds-fa26](https://dthain.github.io/hpds-fa26)
 
 ## Overview
 
@@ -54,10 +54,10 @@ If you have a technical question that could be of interest to others, please pos
 Each assignment will require that you evaluate your work in multiple locations,
 so as to consider the effects of different hardware.  We assume that you have
 access to a laptop or workstation in the CSE department as a starting point.
-In addition, you must request accounts at these two facilities <b>during the first week of class</b> so as to be able to use them throughout the semester.
+In addition, you must request accounts at these two facilities <b>during the first week of class** so as to be able to use them throughout the semester.
 
-- <a href=https://docs.crc.nd.edu>Notre Dame Center for Research Computing (CRC)</a> - Our local campus facility which provess a shared cluster accessible of CPUs and GPUs through SLURM or HTCondor along with parallel storage capability.  This is easy to get started with, and generally has plenty of capacity available early in the semester.  <b>Beware: The cluster tends to become highly utilized with long wait times during the last few weeks of the semester.</b>
-- <a href=https://access-ci.org>NSF ACCESS CI</a> - A national federation of computing facilities accessible through a common interface.  Students should request an EXPLORE allocation and initially request access to the Purdue Anvil facility as a common starting point.  Shifting to other facilities during the semester to explore what is available is encouraged. 
+- [Notre Dame Center for Research Computing (CRC)](https://docs.crc.nd.edu) - Our local campus facility which provess a shared cluster accessible of CPUs and GPUs through SLURM or HTCondor along with parallel storage capability.  This is easy to get started with, and generally has plenty of capacity available early in the semester.  **Beware: The cluster tends to become highly utilized with long wait times during the last few weeks of the semester.**
+- [NSF ACCESS Cyberinfrastructure](https://access-ci.org) - A national federation of computing facilities accessible through a common interface.  Students should request an EXPLORE allocation and initially request access to the Purdue Anvil facility as a common starting point.  Shifting to other facilities during the semester to explore what is available is encouraged. 
 
 ## How to Get the Most Out of this Course
 
@@ -72,17 +72,15 @@ without concern for our words (unpracticed, accidental, or erroneous) being shar
 If you are concerned about missing a key detail, then please consult the written materials (website, slides, manuals, etc)
 as the definitive resource for the class.
 
-Second, this class is built on the idea that you are a <b>motivated and independent student</b> who is ready to figure out some details on your own.  Each major unit in the class will be developed over 2-3 weeks like this:
+Second, this class is built on the idea that you are a **motivated and independent student** who is ready to figure out some details on your own.  Each major unit in the class will be developed over 2-3 weeks like this:
 
-<ul>
-<li><b>Key Principles</b> - In class, I will give a high level overview of the hardware and software concepts that form the organizing principles of a particular topic, such as multicore programming, cluster architecture, distributed functions, etc.
-<li><b>Tech Intro</b> - There may be multiple technologies that exhibit these principles.  I will pick *one* widely used technology in each area (e.g. OpenMP, CUDA, HTCondor), and give you a practical introduction showing how to get started, run some example codes, perform some common transformations, and measure performance.
-<li><b>Deep Dive</b> - Out of class, you will dig deeply into technology and learn **more than was shown in the intro** by reading manuals, looking up tutorials, writing code, and trying out new features.  You will certainly have to solve some unexpected problems by puzzling over error messages and trying different approaches.  Be curious, creative, and persistent!
-<li><b>Report Back</b> - The assignments will be somewhat open-ended, so that you can show us what you have learned.
+- **Key Principles** - In class, I will give a high level overview of the hardware and software concepts that form the organizing principles of a particular topic, such as multicore programming, cluster architecture, distributed functions, etc.
+- **Tech Intro** - There may be multiple technologies that exhibit these principles.  I will pick *one* widely used technology in each area (e.g. OpenMP, CUDA, HTCondor), and give you a practical introduction showing how to get started, run some example codes, perform some common transformations, and measure performance.
+- **Deep Dive** - Out of class, you will dig deeply into technology and learn **more than was shown in the intro** by reading manuals, looking up tutorials, writing code, and trying out new features.  You will certainly have to solve some unexpected problems by puzzling over error messages and trying different approaches.  Be curious, creative, and persistent!
+- **Report Back** - The assignments will be somewhat open-ended, so that you can show us what you have learned.
 Demonstrate that you have understood the principles, and then also show that you have found or created new ideas and approaches.
 Each student will sign up for one "demo days" in which you make a short presentation to the class of a technique
 or example that you have worked out yourself.
-</ul>
 
 ## Assignments and Deadlines
 
@@ -106,22 +104,20 @@ then submit whatever work you have accomplished by the deadline, and move on to 
 
 As graduate students, you are training to be research scholars, and the quality of research isn't measured in percentage points.  Research feedback comes in prose form.  Strong work is accepted for publication, while work that needs improvement is decline  and revised.  Great work is read and cited, but never graded. I want you to focus on doing quality work, and not on counting percentage points.
 
-To that end, <b>I will not be awarding numeric or letter grades on each assignment</b>.  Instead, for each assignment, you will receive back a paragraph of qualitative comments indicating where your work is strong,
+To that end, **I will not be awarding numeric or letter grades on each assignment**.  Instead, for each assignment, you will receive back a paragraph of qualitative comments indicating where your work is strong,
 where improvement is needed, and suggestions for learning and going deeper.  We will consider
 your work on the following axes:
 
-<ul>
-<li> <b>Insight</b> - Does your work demonstrate a clear understanding of the principles at work?
+- **Insight** - Does your work demonstrate a clear understanding of the principles at work?
 Your quantitative results should be understandable and well supported by appropriate descriptions.
 Surprising results should be highlighted and described to the best of your ability.
 Explain things as if your reader does not know how it all works.
-<li> <b>Curiosity</b> - Does your work demonstrate a genuine curiosity that goes well beyond
+- **Curiosity** - Does your work demonstrate a genuine curiosity that goes well beyond
 the starting points given in class?  Expect to dig deeply into reference materials,
 troubleshoot unexpected problems, and make use of the all the computing resources available to you.
-<li> <b>Quality</b> - Does your work show care and consistency in all its details?
+- **Quality** - Does your work show care and consistency in all its details?
 Prose should be clearly written; code should be well designed; diagrams should be clear and consistent;
 fonts should be appropriate sizes; etc.
-</ul>
 
 Summary letter grades will be given at the midterm break, before the final exam,
 and then at the end of the course.  `A` will be given to a body of work
