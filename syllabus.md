@@ -2,12 +2,12 @@
 layout: default
 title: Syllabus
 ---
-# Syllabus - CSE 60772 - High Performance Distributed Systems - Fall 2026
+# Syllabus 
 
 ## Instructors:
 
-- Prof. Douglas Thain `dthain@nd.edu`
-- TA: Jin Zhou `jzhou24@nd.edu`
+- Prof. Douglas Thain (`dthain@nd.edu`)
+- TA: Jin Zhou (`jzhou24@nd.edu`)
 
 ## Course Web Page
 
