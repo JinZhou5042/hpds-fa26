@@ -40,7 +40,7 @@ A progress report, class presentation, and written technical paper will summariz
 ## Prerequisites
 
 - CSE 30341 (Operating Systems) or equivalent course.
-- Programming experience in C or Python
+- Programming experience in C and Python
 - Strong fluency with the Unix command line.
 
 ## Communications
@@ -48,16 +48,6 @@ A progress report, class presentation, and written technical paper will summariz
 All of the course details (slides, assignments, manuals, links) will be posted on the course website.
 Feedback on assignments will be returned via Canvas.  The Slack channel will be used for general Q&amp;A for the class.
 If you have a technical question that could be of interest to others, please post it to the channel, so that others can benefit from the answers. You are welcome to post (or answer) questions anytime, and we will generally monitor and answer questions on weekday afternoons. (Keep in mind that we do go home at night, and so late-night questions will get answered the next day.)  For questions about feedback or anything else that just applies specifically to you, just email the instructor or TA directly.
-
-## Facilities Available
-
-Each assignment will require that you evaluate your work in multiple locations,
-so as to consider the effects of different hardware.  We assume that you have
-access to a laptop or workstation in the CSE department as a starting point.
-In addition, you must request accounts at these two facilities **during the first week of class** so as to be able to use them throughout the semester.
-
-- [Notre Dame Center for Research Computing (CRC)](https://docs.crc.nd.edu) - Our local campus facility which provess a shared cluster accessible of CPUs and GPUs through SLURM or HTCondor along with parallel storage capability.  This is easy to get started with, and generally has plenty of capacity available early in the semester.  **Beware:** The cluster tends to become highly utilized with long wait times during the last few weeks of the semester.
-- [NSF ACCESS Cyberinfrastructure](https://access-ci.org) - A national federation of computing facilities accessible through a common interface.  Students should request an EXPLORE allocation and initially request access to the Purdue Anvil facility as a common starting point.  Shifting to other facilities during the semester to explore what is available is encouraged. 
 
 ## How to Get the Most Out of this Course
 
@@ -99,6 +89,16 @@ mandatory participation in a university sponsored event,
 or the other items outlined in section 3.1 of the Undergraduate Academic Code.
 In those cases, please confer with the instructor at the earliest possibility.
 
+## Facilities Available
+
+Each assignment will require that you evaluate your work in multiple locations,
+so as to consider the effects of different hardware.  We assume that you have
+access to a laptop or workstation in the CSE department as a starting point.
+In addition, you must request accounts at these two facilities **during the first week of class** so as to be able to use them throughout the semester.
+
+- [Notre Dame Center for Research Computing (CRC)](https://docs.crc.nd.edu) - Our local campus facility which provess a shared cluster accessible of CPUs and GPUs through SLURM or HTCondor along with parallel storage capability.  This is easy to get started with, and generally has plenty of capacity available early in the semester.  **Beware:** The cluster tends to become highly utilized with long wait times during the last few weeks of the semester.
+- [NSF ACCESS Cyberinfrastructure](https://access-ci.org) - A national federation of computing facilities accessible through a common interface.  Students should request an EXPLORE allocation and initially request access to the Purdue Anvil facility as a common starting point.  Shifting to other facilities during the semester to explore what is available is encouraged. 
+
 ## Grading
 
 As graduate students, you are training to be research scholars, and the quality of research isn't measured in percentage points.  Research feedback comes in prose form.  Strong work is accepted for publication, while work that needs improvement is declined so that it can be revised.  Great work is read and cited, but never graded. I want you to focus on doing quality work, and not on counting percentage points.
@@ -120,7 +120,7 @@ Prose should be clearly written; code should be well designed; diagrams should b
 Summary letter grades will be given at the midterm break, before the final exam,
 and then at the end of the course.  `A` will be given to an overall body of work
 that consistently demonstrates insight, curiosity, and craftsmanship.
-`B` will be given to work that is generally good but leaves room for improvement in one area.
+`B` will be given to work that is generally good but has room for improvement in one area.
 `C` will be given to work that is acceptable but has multiple significant weaknesses.
 
 ## Academic Code of Honor
