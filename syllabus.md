@@ -84,9 +84,9 @@ or example that you have worked out yourself.
 
 ## Assignments and Deadlines
 
-Assignments are generally due at 5PM on the date indicated.
+**Important:** Do not expect to complete assignments in a single sitting on the due date.  Expect that every assignment will involve unexpected errors, queueing delays, troubleshooting, and rumination.  Start early, so that these matters can be spread over several days.
 
-**Careful:** Do not expect to complete assignments in a single sitting on the due date.  Expect that every assignment will involve unexpected errors, queueing delays, troubleshooting, and discussion.  Start early, so that these matters can be spread over several days.
+Assignments are generally due at 5PM on the date indicated.  In general, **late assignments will not be graded**, so if you come up short on time, then submit whatever work you have accomplished by the deadline, and move on to the next assignment.
 
 You are permitted **one free late pass** to account for the ordinary circumstances of
 life, such as a minor illness, schedule conflict, etc.  To do so, just email/slack the TA before the deadline, saying briefly "I would like to take a late pass on assignment X".
@@ -99,33 +99,29 @@ mandatory participation in a university sponsored event,
 or the other items outlined in section 3.1 of the Undergraduate Academic Code.
 In those cases, please confer with the instructor at the earliest possibility.
 
-Otherwise, **late assignments will not be graded**, so if you come up short on time,
-then submit whatever work you have accomplished by the deadline, and move on to the next assignment.
-
 ## Grading
 
-As graduate students, you are training to be research scholars, and the quality of research isn't measured in percentage points.  Research feedback comes in prose form.  Strong work is accepted for publication, while work that needs improvement is decline  and revised.  Great work is read and cited, but never graded. I want you to focus on doing quality work, and not on counting percentage points.
+As graduate students, you are training to be research scholars, and the quality of research isn't measured in percentage points.  Research feedback comes in prose form.  Strong work is accepted for publication, while work that needs improvement is declined so that it can be revised.  Great work is read and cited, but never graded. I want you to focus on doing quality work, and not on counting percentage points.
 
 To that end, **I will not be awarding numeric or letter grades on each assignment**.  Instead, for each assignment, you will receive back a paragraph of qualitative comments indicating where your work is strong,
 where improvement is needed, and suggestions for learning and going deeper.  We will consider
 your work on the following axes:
 
 - **Insight** - Does your work demonstrate a clear understanding of the principles at work?
+Explain things assuming that your reader is encountering your work for the first time.
 Your quantitative results should be understandable and well supported by appropriate descriptions.
 Surprising results should be highlighted and described to the best of your ability.
-Explain things as if your reader does not know how it all works.
 - **Curiosity** - Does your work demonstrate a genuine curiosity that goes well beyond
 the starting points given in class?  Expect to dig deeply into reference materials,
 troubleshoot unexpected problems, and make use of the all the computing resources available to you.
-- **Quality** - Does your work show care and consistency in all its details?
-Prose should be clearly written; code should be well designed; diagrams should be clear and consistent;
-fonts should be appropriate sizes; etc.
+- **Craftsmanship** - Does your work show care and consistency in execution?
+Prose should be clearly written; code should be well designed; diagrams should be clear and consistent; fonts should be appropriate sizes; etc.
 
 Summary letter grades will be given at the midterm break, before the final exam,
-and then at the end of the course.  `A` will be given to a body of work
-that consistently demonstrates insight, curiosity, and quality.
+and then at the end of the course.  `A` will be given to an overall body of work
+that consistently demonstrates insight, curiosity, and craftsmanship.
 `B` will be given to work that is generally good but leaves room for improvement in one area.
-`C` will be given to work that is acceptable but lacking in two areas.
+`C` will be given to work that is acceptable but has multiple significant weaknesses.
 
 ## Academic Code of Honor
 
@@ -139,13 +135,13 @@ experiments, plot your own graphs, and write your own text.  If your work incorp
 that came from somewhere else, then they must be clearly identified as such, and the source cited by an appropriate method.
 
 Artifical Intelligence (AI) technologies are of course everywhere and rapidly changing.
-This includes tools such as ChatGPT, Gemini, Copilot, and anything else that functions similarly.
+This includes tools such as ChatGPT, Gemini, Copilot, and anything else that functions similarly.  We will discuss these tools at various points and consider their impact on the profession.  In general:
 
-- You are **permitted** to use AI tools to **discover information**.  These tools can be very helpful to survey technologies, suggest specific features, troubleshoot problems, and understand error messages.  If the outcome is an increase in your own understanding then you are using these tools **correctly**.
+- You are **permitted** to use AI tools to **discover information**.  These tools can be very helpful to survey technologies, suggest specific features, troubleshoot problems, and understand error messages.  If the outcome is an increase in your own understanding, then you are using these tools **correctly**.
 - You are **prohibited** from AI tools to **generate products**.  You should be writing your own code,
-drawing your own conclusions, and writing your own words.  If the outcome is a copy-paste of material into your assignments, then you are using these tools **incorrectly.**
+drawing your own conclusions, and writing your own words.  If the outcome is a copy-paste of material from AI into your assignments, then you are using these tools **incorrectly.**
 
-This is the key test: **You should be able to readily explain any aspect of your own work: how you wrote it, how it works, and what it means.  If you cannot do that, then the only logical conclusion is that it is not your own work.**
+This is the key test: **You should be able to readily explain any aspect of your submitted work: how you wrote it, how it works, and what it means.**  If you cannot do that, then the only logical conclusion is that it is not your own work.
 
 ## Some Campus Resources
 
