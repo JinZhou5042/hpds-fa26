@@ -1,14 +1,13 @@
 Name:
 Notre Dame NetID:
-ACCESS ID:
-
-Anvil
-Job ID:
-anvil-JOBID.out:
-seff State and ExitCode:
 
 CRC
 Front end:
 Job ID:
 crc-hello.out:
 crc-hello.log termination line:
+
+Anvil
+Job ID:
+anvil-JOBID.out:
+seff State and ExitCode:
