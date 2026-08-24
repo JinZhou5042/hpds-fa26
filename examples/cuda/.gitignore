@@ -1,0 +1,13 @@
+/*/build/
+/*/condor/
+/*/.condor_*
+*.o
+*.d
+core
+core.*
+/02-multidimensional-data/bird_grayscale.png
+/02-multidimensional-data/bird_blurred.png
+.DS_Store
+*~
+*.swp
+*.swo
