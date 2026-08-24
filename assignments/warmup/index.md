@@ -1,3 +1,8 @@
+---
+layout: default
+title: A0 - Computing Resources Warmup
+---
+
 # A0: Computing Resources Warmup
 
 In this assignment, you will set up accounts at Purdue Anvil and the Notre Dame CRC, then submit one small batch job at each site. The jobs themselves are deliberately simple. The point is to get account and scheduler problems out of the way before we begin larger assignments.
