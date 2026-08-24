@@ -53,7 +53,7 @@ cat crc-hello.err
 tail -n 12 crc-hello.log
 ```
 
-The job succeeded if `crc-hello.out` contains the name of an execute machine, `crc-hello.err` is empty, and the end of `crc-hello.log` reports normal termination with return value 0.
+The job succeeded if `crc-hello.out` contains the name of an execute machine, `crc-hello.err` is empty, and the end of `crc-hello.log` reports that the job terminated with exit code 0.
 
 ## Part B: ACCESS and Purdue Anvil
 
@@ -107,6 +107,6 @@ The job succeeded if `anvil-JOBID.out` names a compute host and `seff` reports `
 
 ## What to submit
 
-After completing both parts, download [warmup-template.txt](warmup-template.txt), rename it `warmup.txt`, and fill in each field. Send a second email to `jzhou24@nd.edu` with the subject `[CSE 60772] A0 - NETID`, replacing `NETID` with your own NetID, and attach `warmup.txt`. This second email is your assignment submission; do not include your ACCESS ID again. Copy the requested output as text; screenshots are not necessary. Do not include passwords, Duo codes, recovery codes, or private keys.
+After completing both parts, download [warmup-template.txt](warmup-template.txt), rename it `warmup.txt`, and fill in each field. Email the completed file to `jzhou24@nd.edu` with the subject `[CSE 60772] A0 - NETID`, replacing `NETID` with your own NetID. Copy the requested output as text; screenshots are not necessary. Do not include passwords, Duo codes, recovery codes, or private keys.
 
 If ACCESS, Anvil, or CRC is still processing your request at the deadline, write `PENDING`, the date you made the request, and the current status in that section. Finish the remaining job after access is enabled.
