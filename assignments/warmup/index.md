@@ -172,4 +172,4 @@ You are welcome to email the TA at `jzhou24@nd.edu` whenever you need help. Desc
 - [Anvil job submission](https://docs.rcac.purdue.edu/userguides/anvil/jobs/)
 - [CRC account request](https://docs.crc.nd.edu/new_user/obtain_account.html)
 - [CRC quick start](https://docs.crc.nd.edu/new_user/quick_start.html)
-- [HTCondor at Notre Dame](https://docs.crc.nd.edu/resources/condor.html)
+- [HTCondo
