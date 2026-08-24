@@ -11,6 +11,8 @@ Start both account requests as soon as possible. Account creation and resource a
 
 Read the course [General Assignment Guidance](../../general) before starting. It explains how to create the accounts, connect to both clusters, use shared front ends responsibly, and ask for help.
 
+Before beginning the tasks below, [create or recover your ACCESS account](../../general#create-an-access-account) and [email your ACCESS ID to the TA](../../general#join-the-course-allocation). This is the first of two emails: it is needed to request Anvil access and is not your assignment submission. If you have already sent this email, do not send it again.
+
 ## Part A: Notre Dame CRC
 
 ### 1. Request a CRC account
@@ -55,23 +57,19 @@ The job succeeded if `crc-hello.out` contains the name of an execute machine, `c
 
 ## Part B: ACCESS and Purdue Anvil
 
-### 1. Create an ACCESS account
+### 1. Wait to be added to Anvil
 
-Follow [Using NSF ACCESS](../../general#using-nsf-access) to create or recover your ACCESS account and send your ACCESS ID to the TA. Record the ACCESS ID in `warmup.txt`.
-
-### 2. Wait to be added to Anvil
-
-Our ACCESS project CIS261613 has been approved, but the exchange for Anvil computing resources is still under review. You can create your ACCESS account and email the TA your ACCESS ID now, but you must wait for the class announcement before trying to log in to Anvil.
+Our ACCESS project CIS261613 has been approved, but the exchange for Anvil computing resources is still under review. Wait for the class announcement before trying to log in to Anvil.
 
 After the Anvil exchange is approved, the TA will add your ACCESS ID to CIS261613 and enable the Anvil resource for you. This is not something students can do themselves.
 
 Check **My Projects** as described in the general guidance. Continue when CIS261613 lists Anvil and shows your Anvil username.
 
-### 3. Log in to Anvil
+### 2. Log in to Anvil
 
 Follow [Use Purdue Anvil](../../general#use-purdue-anvil) to open an Anvil shell and identify your Slurm account with `mybalance`.
 
-### 4. Submit a Slurm job
+### 3. Submit a Slurm job
 
 Use Slurm to run the test job on a compute node.
 
@@ -109,6 +107,6 @@ The job succeeded if `anvil-JOBID.out` names a compute host and `seff` reports `
 
 ## What to submit
 
-Download [warmup-template.txt](warmup-template.txt), rename it `warmup.txt`, and fill in each field. Reply to the same email thread that you used to send your ACCESS ID and attach the completed `warmup.txt`. Copy the requested output as text; screenshots are not necessary. Do not include passwords, Duo codes, recovery codes, or private keys.
+After completing both parts, download [warmup-template.txt](warmup-template.txt), rename it `warmup.txt`, and fill in each field. Send a second email to `jzhou24@nd.edu` with the subject `[CSE 60772] A0 - NETID`, replacing `NETID` with your own NetID, and attach `warmup.txt`. This second email is your assignment submission; do not include your ACCESS ID again. Copy the requested output as text; screenshots are not necessary. Do not include passwords, Duo codes, recovery codes, or private keys.
 
 If ACCESS, Anvil, or CRC is still processing your request at the deadline, write `PENDING`, the date you made the request, and the current status in that section. Finish the remaining job after access is enabled.
