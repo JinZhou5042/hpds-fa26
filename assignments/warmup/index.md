@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # A0: Computing Resources Warmup
 
 In this assignment, you will set up accounts at Purdue Anvil and the Notre Dame CRC, then submit one small batch job at each site. The jobs themselves are deliberately simple. The point is to get account and scheduler problems out of the way before we begin larger assignments.
@@ -10,9 +6,9 @@ Start both account requests as soon as possible. Account creation and resource a
 
 ## Anvil status
 
-> **As of August 23, 2026:** Our ACCESS project, **CIS261613**, has been approved. The exchange for 50,000 Anvil CPU SUs and 1,000 Anvil GPU hours is still **Under Review**. You can create your ACCESS account and email the TA your ACCESS ID now, but you must wait for the class announcement before trying to log in to Anvil.
+Our ACCESS project CIS261613 has been approved, but the exchange for Anvil computing resources is still under review. You can create your ACCESS account and email the TA your ACCESS ID now, but you must wait for the class announcement before trying to log in to Anvil.
 
-The course staff will add students to the allocation after the exchange is active. This is not something students can do themselves.
+The TA will add students to the allocation after the exchange is active. This is not something students can do themselves.
 
 ## Part A: ACCESS and Purdue Anvil
 
