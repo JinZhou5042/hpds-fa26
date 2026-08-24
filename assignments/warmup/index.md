@@ -1,6 +1,5 @@
 ---
 layout: default
-title: A0 - Computing Resources Warmup
 ---
 
 # A0: Computing Resources Warmup
