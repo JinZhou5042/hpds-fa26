@@ -1,19 +1,14 @@
 Name:
 Notre Dame NetID:
-
-Part A - ACCESS / Anvil
 ACCESS ID:
-Anvil username:
-Slurm account reported by mybalance:
-Slurm job ID:
-Contents of anvil-JOBID.out:
-Relevant State and ExitCode lines from seff JOBID:
 
-Part B - Notre Dame CRC
-CRC account request date:
-CRC account creation date:
-CRC front end used:
-HTCondor job ID:
-Contents of crc-hello.out:
-Contents of crc-hello.err:
-Final job-termination lines from crc-hello.log:
+Anvil
+Job ID:
+anvil-JOBID.out:
+seff State and ExitCode:
+
+CRC
+Front end:
+Job ID:
+crc-hello.out:
+crc-hello.log termination line:
