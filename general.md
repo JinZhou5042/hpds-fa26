@@ -95,5 +95,3 @@ Follow the submission instructions on each assignment page. Unless an assignment
 ### Getting help
 
 You are welcome to email the TA at `jzhou24@nd.edu` whenever you need help. Clearly describe which system you are using, what you tried, and what happened. Include your source code and the complete command output or error message, and attach screenshots if possible. The TA will be happy to help.
-
-Never send passwords, Duo codes, recovery codes, or private keys.

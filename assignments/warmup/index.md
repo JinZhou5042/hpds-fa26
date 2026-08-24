@@ -107,6 +107,6 @@ The job succeeded if `anvil-JOBID.out` names a compute host and `seff` reports `
 
 ## What to submit
 
-After completing both parts, download [warmup-template.txt](warmup-template.txt), rename it `warmup.txt`, and fill in each field. Email the completed file to `jzhou24@nd.edu` with the subject `[CSE 60772] A0 - NETID`, replacing `NETID` with your own NetID. Copy the requested output as text; screenshots are not necessary. Do not include passwords, Duo codes, recovery codes, or private keys.
+After completing both parts, download [warmup-template.txt](warmup-template.txt), rename it `warmup.txt`, and fill in each field. Email the completed file to `jzhou24@nd.edu` with the subject `[CSE 60772] A0 - NETID`, replacing `NETID` with your own NetID.
 
 If ACCESS, Anvil, or CRC is still processing your request at the deadline, write `PENDING`, the date you made the request, and the current status in that section. Finish the remaining job after access is enabled.
