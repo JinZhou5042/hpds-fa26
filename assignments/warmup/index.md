@@ -94,8 +94,6 @@ Try these commands and explore various options to view the state of the cluster 
 - `condor_userprio`
 - [condor_matrix](http://condor.cse.nd.edu/condor_matrix.cgi)
 
-Summarize 
-
 ## Part B: ACCESS and Purdue Anvil
 
 ### 1. Wait to be added to Anvil
