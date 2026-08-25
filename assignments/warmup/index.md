@@ -10,7 +10,7 @@ In this assignment, you will set up accounts at the Notre Dame CRC and Purdue An
 First review the [general instructions](../../general) and do the [first time setup](../../setup) instructions.
 Start both account requests as soon as possible. Account creation and resource access may take a few days.
 
-Before beginning the tasks below, [create or recover your ACCESS account](../../setup#create-an-nsf-access-account) and [email your ACCESS ID to the TA](../../setup#join-the-course-allocation). This is the first of two emails: it is needed to request Anvil access and is not your assignment submission. If you have already sent this email, do not send it again.
+Before beginning the tasks below, [create or recover your ACCESS account](../../setup#create-an-nsf-access-account) and [email your ACCESS ID to the TA](../../setup#join-the-course-allocation). Submit the completed assignment through Canvas as described below. If you have already sent the ACCESS ID email, do not send it again.
 
 ## Part A: Notre Dame CRC
 
