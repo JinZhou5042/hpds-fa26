@@ -100,9 +100,11 @@ Summarize
 
 ### 1. Wait to be added to Anvil
 
-Our ACCESS project CIS261613 has been approved, but the exchange for Anvil computing resources is still under review. Wait for the class announcement before trying to log in to Anvil.
+Our ACCESS project CIS261613 and the exchange for Anvil computing resources have been approved. Wait for the class announcement before trying to log in to Anvil.
 
-After the Anvil exchange is approved, the TA will add your ACCESS ID to CIS261613 and enable the Anvil resource for you. This is not something students can do themselves.
+The TA will add your ACCESS ID to CIS261613 and enable the Anvil resource for you. This is not something students can do themselves.
+
+Anvil account setup may take a few days after the TA enables the resource. See the [ACCESS guidance](https://allocations.access-ci.org/get-your-first-project).
 
 Check **My Projects** as described in the general guidance. Continue when CIS261613 lists Anvil and shows your Anvil username.
 

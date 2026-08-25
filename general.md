@@ -64,6 +64,8 @@ All CRC front ends are shared by many users. A long-running or multicore program
 
 Open [Anvil Open OnDemand](https://ondemand.anvil.rcac.purdue.edu/), log in with your ACCESS identity, and select **Clusters -> Anvil Shell Access**. Anvil access will not work until the course has an active Anvil allocation and the TA has assigned you to it.
 
+Anvil account setup may take a few days after the TA enables the resource. Wait until **My Projects** shows Anvil and your resource username before logging in. See the [ACCESS guidance](https://allocations.access-ci.org/get-your-first-project).
+
 Run these commands after opening the Anvil shell:
 
 ```console
