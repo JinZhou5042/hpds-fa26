@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 4.2_arithmetic_intensity
- *   make condor_run build/4.2_arithmetic_intensity
- *   make condor_submit build/4.2_arithmetic_intensity
+ *   ./4.2_arithmetic_intensity
  *
  * Section 4.2: Arithmetic intensity and a roofline-style bandwidth ceiling
  *

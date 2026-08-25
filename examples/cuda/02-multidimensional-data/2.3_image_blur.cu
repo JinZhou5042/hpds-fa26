@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 2.3_image_blur
- *   make condor_run build/2.3_image_blur
- *   make condor_submit build/2.3_image_blur
+ *   ./2.3_image_blur bird.png bird_blurred.png 2
  *
  * Section 2.3: Blur a PNG with neighborhood boundary conditions
  *

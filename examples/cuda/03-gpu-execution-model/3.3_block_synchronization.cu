@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 3.3_block_synchronization
- *   make condor_run build/3.3_block_synchronization
- *   make condor_submit build/3.3_block_synchronization
+ *   ./3.3_block_synchronization
  *
  * Section 3.3: Block synchronization with __syncthreads()
  *

@@ -1,8 +1,7 @@
 /*
  * From this topic directory:
  *   make 1.1_cpu_vector_add
- *   make condor_run build/1.1_cpu_vector_add
- *   make condor_submit build/1.1_cpu_vector_add
+ *   ./1.1_cpu_vector_add
  *
  * Section 1.1: Understand ordinary CPU vector addition
  *

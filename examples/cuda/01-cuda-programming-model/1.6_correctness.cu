@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 1.6_correctness
- *   make condor_run build/1.6_correctness
- *   make condor_submit build/1.6_correctness
+ *   ./1.6_correctness
  *
  * Section 1.6: Validate GPU correctness with a CPU reference
  *

@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 4.1_memory_spaces
- *   make condor_run build/4.1_memory_spaces
- *   make condor_submit build/4.1_memory_spaces
+ *   ./4.1_memory_spaces
  *
  * Section 4.1: CUDA memory spaces, scope, and lifetime
  *

@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make overall
- *   make condor_run build/overall
- *   make condor_submit build/overall
+ *   ./overall bird.png overall_bird_grayscale.png overall_bird_blurred.png 2
  *
  * Overall program: Image pipeline plus matrix multiplication
  *

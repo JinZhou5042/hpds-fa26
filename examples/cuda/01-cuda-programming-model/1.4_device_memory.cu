@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 1.4_device_memory
- *   make condor_run build/1.4_device_memory
- *   make condor_submit build/1.4_device_memory
+ *   ./1.4_device_memory
  *
  * Section 1.4: Allocate, transfer, use, and free device memory
  *

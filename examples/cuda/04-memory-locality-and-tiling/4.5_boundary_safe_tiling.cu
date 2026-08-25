@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 4.5_boundary_safe_tiling
- *   make condor_run build/4.5_boundary_safe_tiling
- *   make condor_submit build/4.5_boundary_safe_tiling
+ *   ./4.5_boundary_safe_tiling
  *
  * Section 4.5: Boundary-safe tiled multiplication for rectangular matrices
  *

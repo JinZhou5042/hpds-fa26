@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 2.1_multidimensional_indices
- *   make condor_run build/2.1_multidimensional_indices
- *   make condor_submit build/2.1_multidimensional_indices
+ *   ./2.1_multidimensional_indices
  *
  * Section 2.1: Multidimensional grids, blocks, data, and flattening
  *

@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 1.3_global_indices
- *   make condor_run build/1.3_global_indices
- *   make condor_submit build/1.3_global_indices
+ *   ./1.3_global_indices
  *
  * Section 1.3: Map multiple blocks to element indices
  *

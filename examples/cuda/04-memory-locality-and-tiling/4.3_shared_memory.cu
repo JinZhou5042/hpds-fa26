@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 4.3_shared_memory
- *   make condor_run build/4.3_shared_memory
- *   make condor_submit build/4.3_shared_memory
+ *   ./4.3_shared_memory
  *
  * Section 4.3: Cooperative loading and reuse in shared memory
  *

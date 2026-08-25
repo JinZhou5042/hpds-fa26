@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 3.1_device_properties
- *   make condor_run build/3.1_device_properties
- *   make condor_submit build/3.1_device_properties
+ *   ./3.1_device_properties
  *
  * Section 3.1: Query the hardware that will execute this program
  *

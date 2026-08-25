@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 4.6_dynamic_shared_occupancy
- *   make condor_run build/4.6_dynamic_shared_occupancy
- *   make condor_submit build/4.6_dynamic_shared_occupancy
+ *   ./4.6_dynamic_shared_occupancy
  *
  * Section 4.6: Dynamic shared memory and occupancy tradeoffs
  *

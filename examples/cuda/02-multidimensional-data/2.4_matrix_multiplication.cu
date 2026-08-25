@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 2.4_matrix_multiplication
- *   make condor_run build/2.4_matrix_multiplication
- *   make condor_submit build/2.4_matrix_multiplication
+ *   ./2.4_matrix_multiplication
  *
  * Section 2.4: Naive matrix multiplication with one thread per output
  *

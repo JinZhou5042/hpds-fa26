@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 3.5_occupancy
- *   make condor_run build/3.5_occupancy
- *   make condor_submit build/3.5_occupancy
+ *   ./3.5_occupancy
  *
  * Section 3.5: Resource partitioning, residency, and occupancy
  *
