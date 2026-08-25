@@ -6,15 +6,40 @@ layout: default
 
 This page contains account and cluster information that applies to all assignments. Read the individual assignment page for the work you must complete and the files you must submit.
 
-## Using Notre Dame CRC
+Before doing anything else, follow the [setup instructions](setup) to create your various accounts.
 
-### Request a CRC account
+## Code Repository
 
-Sign in to your Notre Dame email account, open the [CRC account instructions](https://docs.crc.nd.edu/new_user/obtain_account.html), and complete the linked new-user form.
+Anything to be turned in should be checked into your repository for this course,
+which will grow and evolve as the semester develops.  Please put each assignment
+in a separate directory named according to the unit: `warmup`, `simd`, `openmd`, `cuda` and so forth.
 
-You only need your own CRC account. There is no special CRC project or course account to join. Wait for the CRC account confirmation email and follow the first-login instructions in that message, including the Okta synchronization step if it is requested.
+In that directory, you should include all the technical materials
+that describe the experiments you ran, along with the results.
+Make sure to include:
 
-### Connect to a CRC front end
+- Source code for anything you ran.  (even if examples from the textbook)
+- All scripts needed to build or run the code.  (e.g. shell script, makefile...)
+- Raw data resulting from your experiments. (e.g. runtimes for each configuration)
+- Code to generate the necessary plots. (e.g. matplotlib code or gnuplot file)
+- A `README.md` file that addresses the questions and other objectives of the assignment.
+
+We strongly recommend that you add materials to the repository incrementally as you work,
+rather than trying to assemble things at the last minute.  Commit as you go.
+
+In all things, take time to organize your materials, give them constructive names,
+and make everything clear and consistent.
+
+## Turning In
+
+Once you have committed and pushed any necessary changes to your repository,
+simply go to Canvas and submit the assignment online by pasting the URL
+of your repository.  Once an assignment is submitted, you are welcome to work on the next assignments
+by making commits in other directories.
+
+## Resources
+
+### Using the Notre Dame CRC
 
 If you are off campus, connect to the Notre Dame VPN before using SSH. Follow the [Notre Dame VPN installation and connection instructions](https://nd.service-now.com/nd_portal?id=product_page&sys_id=9d5919c7db22a34099dcf25bbf9619e2&table=cmdb_ci_business_app/). If you are on campus, connect through the campus network.
 
@@ -34,34 +59,6 @@ All CRC front ends are shared by many users. A long-running or multicore program
 - [CRC account request](https://docs.crc.nd.edu/new_user/obtain_account.html)
 - [CRC quick start](https://docs.crc.nd.edu/new_user/quick_start.html)
 - [HTCondor at Notre Dame](https://docs.crc.nd.edu/resources/condor.html)
-
-## Using NSF ACCESS
-
-ACCESS provides accounts for national computing facilities, including Purdue Anvil.
-
-### Create an ACCESS account
-
-Go to the [ACCESS Account page](https://account.access-ci.org/) and select **Register**. Register with your Notre Dame email address and complete the profile, email verification, and authentication steps.
-
-If you already have an ACCESS or former XSEDE account, use that account. Do not create a second one.
-
-After registration, open your ACCESS profile and copy the **ACCESS ID** exactly as shown. Your ACCESS ID is not necessarily the same as your Notre Dame NetID.
-
-### Join the course allocation
-
-The class uses the following ACCESS project:
-
-```text
-Project: CIS261613
-Title: Graduate Course in High Performance Distributed Systems
-PI: Douglas Thain
-```
-
-You do not need to request your own ACCESS project or exchange ACCESS Credits. Email your name, Notre Dame NetID, and ACCESS ID to the TA at `jzhou24@nd.edu` with the subject `[CSE 60772] ACCESS ID - NETID`, replacing `NETID` with your own NetID.
-
-This email is only a request to be added to the course allocation; it is not an assignment submission. Send it once, before beginning the warmup assignment. The assignment itself will be submitted in a second email after the work is complete.
-
-The TA must add your ACCESS ID to the course project and enable the appropriate computing resource. You can check your access in the [ACCESS Allocations portal](https://allocations.access-ci.org/) under **My Projects**. A resource is ready when it appears under CIS261613 and shows a resource username. Provisioning may not be immediate.
 
 ### Use Purdue Anvil
 
@@ -88,10 +85,3 @@ The Anvil shell runs on a shared login node. Use it for short tasks such as edit
 - [Anvil getting started](https://docs.rcac.purdue.edu/userguides/anvil/getting-started/)
 - [Anvil job submission](https://docs.rcac.purdue.edu/userguides/anvil/jobs/)
 
-## Turning in Assignments
-
-Follow the submission instructions on each assignment page. Unless an assignment says otherwise, copy terminal output as text rather than submitting screenshots.
-
-### Getting help
-
-You are welcome to email the TA at `jzhou24@nd.edu` whenever you need help. Clearly describe which system you are using, what you tried, and what happened. Include your source code and the complete command output or error message, and attach screenshots if possible. The TA will be happy to help.
