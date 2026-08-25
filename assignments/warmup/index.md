@@ -168,9 +168,10 @@ The job succeeded if `anvil-JOBID.out` names a compute host and `seff` reports `
 Create your repository as described in the [first time setup](instructions).
 
 In that repository, create a `warmup` directory, and include the following:
-- All the files submitted/created to run a job on the CRC.
-- ALl the files submitted/created to run a job on Anvil.
-- A README.md file that describes.
+- All the files submitted/created to run a job on the ND CRC.
+- All the files submitted/created to run a job on Purdue Anvil.
+- A README.md file that describes what you did, what the outcomes were,
+and what you learned from the "Explore Further" prompts.
 
 Make sure you have committed and pushed all your work.
 
