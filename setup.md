@@ -37,7 +37,7 @@ PI: Douglas Thain
 
 You do not need to request your own ACCESS project or exchange ACCESS Credits. Email your name, Notre Dame NetID, and ACCESS ID to the TA at `jzhou24@nd.edu` with the subject `[CSE 60772] ACCESS ID - NETID`, replacing `NETID` with your own NetID.
 
-This email is only a request to be added to the course allocation; it is not an assignment submission. Send it once, before beginning the warmup assignment. The assignment itself will be submitted in a second email after the work is complete.
+This email is only a request to be added to the course allocation; it is not an assignment submission. Send it once, before beginning the warmup assignment. Submit the completed assignment through Canvas by pasting the repository URL into the assignment submission page.
 
 The TA must add your ACCESS ID to the course project and enable the appropriate computing resource. You can check your access in the [ACCESS Allocations portal](https://allocations.access-ci.org/) under **My Projects**. A resource is ready when it appears under CIS261613 and shows a resource username. Provisioning may not be immediate.
 
