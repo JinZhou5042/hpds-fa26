@@ -10,17 +10,17 @@ In this assignment, you will set up accounts at the Notre Dame CRC and Purdue An
 First review the [general instructions](../../general) and do the [first time setup](../../setup) instructions.
 Start both account requests as soon as possible. Account creation and resource access may take a few days.
 
-Before beginning the tasks below, [create or recover your ACCESS account](../../general#create-an-access-account) and [email your ACCESS ID to the TA](../../general#join-the-course-allocation). This is the first of two emails: it is needed to request Anvil access and is not your assignment submission. If you have already sent this email, do not send it again.
+Before beginning the tasks below, [create or recover your ACCESS account](../../setup#create-an-nsf-access-account) and [email your ACCESS ID to the TA](../../setup#join-the-course-allocation). This is the first of two emails: it is needed to request Anvil access and is not your assignment submission. If you have already sent this email, do not send it again.
 
 ## Part A: Notre Dame CRC
 
 ### 1. Request a CRC account
 
-Follow [Request a CRC account](../../general#request-a-crc-account) and wait for CRC to confirm that your account is ready.
+Follow [Request a CRC account](../../setup#request-a-crc-account) and wait for CRC to confirm that your account is ready.
 
 ### 2. Log in to a CRC front end
 
-Follow [Connect to a CRC front end](../../general#connect-to-a-crc-front-end), choose either `crcfe01.crc.nd.edu` or `crcfe02.crc.nd.edu`, and make a note of your choice.
+Follow [Connect to a CRC front end](../../general#using-the-notre-dame-crc), choose either `crcfe01.crc.nd.edu` or `crcfe02.crc.nd.edu`, and make a note of your choice.
 
 The "front end" machine is a normal Linux machine, capable of running ordinary applications.
 (Experiment with the `w` and `ps` and `top` commands to view the large number of people and processes running.)
@@ -165,7 +165,7 @@ The job succeeded if `anvil-JOBID.out` names a compute host and `seff` reports `
 
 ## Turning In
 
-Create your repository as described in the [first time setup](instructions).
+Create your repository as described in the [first time setup](../../setup).
 
 In that repository, create a `warmup` directory, and include the following:
 - All the files submitted/created to run a job on the ND CRC.
