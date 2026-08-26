@@ -62,9 +62,7 @@ All CRC front ends are shared by many users. A long-running or multicore program
 
 ### Use Purdue Anvil
 
-Open [Anvil Open OnDemand](https://ondemand.anvil.rcac.purdue.edu/), log in with your ACCESS identity, and select **Clusters -> Anvil Shell Access**. Anvil access will not work until the course has an active Anvil allocation and the TA has assigned you to it.
-
-After the TA enables Anvil, it may take a few days for your account to become active. Wait until **My Projects** shows Anvil and your resource username before logging in. See the [ACCESS guidance](https://allocations.access-ci.org/get-your-first-project).
+After completing [Join the course allocation](setup#join-the-course-allocation), open [Anvil Open OnDemand](https://ondemand.anvil.rcac.purdue.edu/), log in with your ACCESS identity, and select **Clusters -> Anvil Shell Access**.
 
 Run these commands after opening the Anvil shell:
 
@@ -75,7 +73,7 @@ mybalance
 showpartitions
 ```
 
-Your Anvil username will normally begin with `x-` and is different from your ACCESS ID. `mybalance` shows the Slurm account used to submit jobs; do not assume that this account name is the same as the ACCESS project ID.
+Your Anvil username will normally begin with `x-` and is different from your ACCESS ID. `mybalance` lists the Slurm accounts available to you.
 
 The Anvil shell runs on a shared login node. Use it for short tasks such as editing files, compiling small programs, and submitting or checking jobs. Run long, CPU-intensive, memory-intensive, or multicore programs through Slurm so that they execute on compute nodes with reserved resources.
 
@@ -86,4 +84,3 @@ The Anvil shell runs on a shared login node. Use it for short tasks such as edit
 - [Anvil access and usernames](https://docs.rcac.purdue.edu/userguides/anvil/access/)
 - [Anvil getting started](https://docs.rcac.purdue.edu/userguides/anvil/getting-started/)
 - [Anvil job submission](https://docs.rcac.purdue.edu/userguides/anvil/jobs/)
-

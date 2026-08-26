@@ -27,7 +27,7 @@ After registration, open your ACCESS profile and copy the **ACCESS ID** exactly 
 
 ### Join the course allocation
 
-The class uses the following ACCESS project:
+The course has an active allocation on Purdue Anvil through this ACCESS project:
 
 ```text
 Project: CIS261613
@@ -37,7 +37,4 @@ PI: Douglas Thain
 
 You do not need to request your own ACCESS project or exchange ACCESS Credits. Email your name, Notre Dame NetID, and ACCESS ID to the TA at `jzhou24@nd.edu` with the subject `[CSE 60772] ACCESS ID - NETID`, replacing `NETID` with your own NetID.
 
-Submit assignments through Canvas by pasting your repository URL.
-
-The TA will add your ACCESS ID to the course project and enable Anvil. Check **My Projects** in the [ACCESS Allocations portal](https://allocations.access-ci.org/). You can begin using Anvil when it appears under CIS261613 and shows a resource username. This may take a few days.
-
+The TA will add your ACCESS ID to the course project. Check **My Projects** in the [ACCESS Allocations portal](https://allocations.access-ci.org/). You can use Anvil after it appears under CIS261613 with a resource username. Provisioning may take some time after you are added.

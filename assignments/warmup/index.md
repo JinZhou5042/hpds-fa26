@@ -7,10 +7,7 @@ title: A0 - Computing Resources Warmup
 
 In this assignment, you will set up accounts at the Notre Dame CRC and Purdue Anvil, then submit one small batch job at each site. The jobs themselves are deliberately simple. The point is to get account and scheduler problems out of the way before we begin larger assignments.
 
-Complete the [first-time setup](../../setup) and read the [general instructions](../../general) before starting.
-Start both account requests as soon as possible. Account creation and resource access may take a few days.
-
-Follow [Join the course allocation](../../setup#join-the-course-allocation) to send your ACCESS ID to the TA.
+Complete the [first-time setup](../../setup) and read the [general instructions](../../general) before starting. Start both account requests early because provisioning may take a few days.
 
 ## Part A: Notre Dame CRC
 
@@ -100,17 +97,11 @@ Try these commands and explore various options to view the state of the cluster 
 
 ## Part B: ACCESS and Purdue Anvil
 
-### 1. Wait to be added to Anvil
+### 1. Log in to Anvil
 
-The course has an active Anvil allocation. The TA will add you after receiving your ACCESS ID.
+Follow [Use Purdue Anvil](../../general#use-purdue-anvil) to open an Anvil shell. Confirm that `mybalance` lists the course CPU account `cis261613` before continuing.
 
-It may take a few days for your Anvil account to become active. Check **My Projects** and continue when CIS261613 lists Anvil and shows your Anvil username. See the [ACCESS guidance](https://allocations.access-ci.org/get-your-first-project).
-
-### 2. Log in to Anvil
-
-Follow [Use Purdue Anvil](../../general#use-purdue-anvil) to open an Anvil shell and identify your Slurm account with `mybalance`.
-
-### 3. Submit a Slurm job
+### 2. Submit a Slurm job
 
 Use Slurm to run the test job on a compute node.
 
@@ -124,11 +115,12 @@ cd warmup
 Create a file called `anvil-hello.slurm` containing instructions to run a job on the cluster:
 ```
 #!/bin/bash
-#SBATCH --account=SLURM_ACCOUNT_FROM_MYBALANCE
-#SBATCH --partition=standard
+#SBATCH --account=cis261613
+#SBATCH --partition=shared
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
+#SBATCH --mem=128M
 #SBATCH --time=00:01:00
 #SBATCH --job-name=hpds-warmup
 #SBATCH --output=anvil-%j.out
@@ -139,8 +131,6 @@ echo "user=$(whoami)"
 echo "compute_host=$(hostname)"
 date -u '+utc_time=%Y-%m-%dT%H:%M:%SZ'
 ```
-
-In `anvil-hello.slurm`, replace `SLURM_ACCOUNT_FROM_MYBALANCE` with the account printed by `mybalance`, then save the file.
 
 Submit the job like this:
 
