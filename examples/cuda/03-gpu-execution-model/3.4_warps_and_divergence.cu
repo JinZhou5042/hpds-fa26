@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 3.4_warps_and_divergence
- *   make condor_run build/3.4_warps_and_divergence
- *   make condor_submit build/3.4_warps_and_divergence
+ *   ./3.4_warps_and_divergence
  *
  * Section 3.4: Warps, SIMD execution, and control divergence
  *

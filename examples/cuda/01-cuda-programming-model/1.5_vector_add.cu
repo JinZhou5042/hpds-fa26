@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 1.5_vector_add
- *   make condor_run build/1.5_vector_add
- *   make condor_submit build/1.5_vector_add
+ *   ./1.5_vector_add
  *
  * Section 1.5: Complete CUDA vector addition
  *

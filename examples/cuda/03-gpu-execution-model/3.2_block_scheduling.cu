@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 3.2_block_scheduling
- *   make condor_run build/3.2_block_scheduling
- *   make condor_submit build/3.2_block_scheduling
+ *   ./3.2_block_scheduling
  *
  * Section 3.2: Blocks are independent scheduling units
  *

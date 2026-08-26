@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 1.2_kernel_launch
- *   make condor_run build/1.2_kernel_launch
- *   make condor_submit build/1.2_kernel_launch
+ *   ./1.2_kernel_launch
  *
  * Section 1.2: Launch one block of GPU threads
  *

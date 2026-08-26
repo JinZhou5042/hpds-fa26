@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make overall
- *   make condor_run build/overall
- *   make condor_submit build/overall
+ *   ./overall
  *
  * Overall program: Naive versus tiled matrix multiplication
  *

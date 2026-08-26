@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 1.7_function_qualifiers
- *   make condor_run build/1.7_function_qualifiers
- *   make condor_submit build/1.7_function_qualifiers
+ *   ./1.7_function_qualifiers
  *
  * Section 1.7: Function qualifiers, compilation, and error visibility
  *

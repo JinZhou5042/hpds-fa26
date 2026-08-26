@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 4.4_tiled_matrix_multiplication
- *   make condor_run build/4.4_tiled_matrix_multiplication
- *   make condor_submit build/4.4_tiled_matrix_multiplication
+ *   ./4.4_tiled_matrix_multiplication
  *
  * Section 4.4: Tiled matrix multiplication with static shared memory
  *

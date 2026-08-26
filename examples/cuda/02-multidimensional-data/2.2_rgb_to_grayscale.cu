@@ -2,8 +2,7 @@
  * From this topic directory:
  *   module load cuda/12.1
  *   make 2.2_rgb_to_grayscale
- *   make condor_run build/2.2_rgb_to_grayscale
- *   make condor_submit build/2.2_rgb_to_grayscale
+ *   ./2.2_rgb_to_grayscale bird.png bird_grayscale.png
  *
  * Section 2.2: Convert an RGB PNG to grayscale
  *
