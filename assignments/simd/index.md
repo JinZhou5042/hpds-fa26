@@ -18,7 +18,7 @@ and use at least one of the new operations that you picked above.  Set up a "bas
 - Automatic vectorization only works if the underlying code is "easy" for the compiler to deal with:
 data must be sequential, packed, aligned and operations must be consistent and done in bulk.
 Ponder your baseline code carefully, and make a change to the organization that "hurts" the performance
-in a substantial way, while still computing the same result.
+in a substantial way, while still computing the same result.  Show that change and the impact on performance.
 
 ## Turning In
 
