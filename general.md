@@ -16,7 +16,7 @@ in a separate directory named according to the unit: `warmup`, `simd`, `openmd`,
 
 In that directory, you should include all the technical materials
 that describe the experiments you ran, along with the results.
-Make sure to include:
+Include these materials when they apply:
 
 - Source code for anything you ran.  (even if examples from the textbook)
 - All scripts needed to build or run the code.  (e.g. shell script, makefile...)
@@ -50,7 +50,7 @@ ssh NETID@crcfe01.crc.nd.edu
 ssh NETID@crcfe02.crc.nd.edu
 ```
 
-CRC also has `condorfe.crc.nd.edu`, a front end dedicated to HTCondor submissions. The general front ends are sufficient for small jobs unless an assignment specifically asks you to use `condorfe`.
+CRC also has `condorfe.crc.nd.edu`, a front end dedicated to HTCondor submissions. Use `condorfe` whenever you submit an HTCondor job.
 
 All CRC front ends are shared by many users. A long-running or multicore program on a front end consumes CPU and memory needed by everyone else and can make logins, editors, compilers, and scheduler commands slow. Use front ends only for short, lightweight work. Submit long-running, CPU-intensive, memory-intensive, or multicore programs through Grid Engine or HTCondor.
 
@@ -64,7 +64,7 @@ All CRC front ends are shared by many users. A long-running or multicore program
 
 Open [Anvil Open OnDemand](https://ondemand.anvil.rcac.purdue.edu/), log in with your ACCESS identity, and select **Clusters -> Anvil Shell Access**. Anvil access will not work until the course has an active Anvil allocation and the TA has assigned you to it.
 
-Anvil account setup may take a few days after the TA enables the resource. Wait until **My Projects** shows Anvil and your resource username before logging in. See the [ACCESS guidance](https://allocations.access-ci.org/get-your-first-project).
+After the TA enables Anvil, it may take a few days for your account to become active. Wait until **My Projects** shows Anvil and your resource username before logging in. See the [ACCESS guidance](https://allocations.access-ci.org/get-your-first-project).
 
 Run these commands after opening the Anvil shell:
 

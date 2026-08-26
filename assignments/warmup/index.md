@@ -7,10 +7,10 @@ title: A0 - Computing Resources Warmup
 
 In this assignment, you will set up accounts at the Notre Dame CRC and Purdue Anvil, then submit one small batch job at each site. The jobs themselves are deliberately simple. The point is to get account and scheduler problems out of the way before we begin larger assignments.
 
-First review the [general instructions](../../general) and do the [first time setup](../../setup) instructions.
+Complete the [first-time setup](../../setup) and read the [general instructions](../../general) before starting.
 Start both account requests as soon as possible. Account creation and resource access may take a few days.
 
-Before beginning the tasks below, [create or recover your ACCESS account](../../setup#create-an-nsf-access-account) and [email your ACCESS ID to the TA](../../setup#join-the-course-allocation). Submit the completed assignment through Canvas as described below. If you have already sent the ACCESS ID email, do not send it again.
+Follow [Join the course allocation](../../setup#join-the-course-allocation) to send your ACCESS ID to the TA.
 
 ## Part A: Notre Dame CRC
 
@@ -18,9 +18,13 @@ Before beginning the tasks below, [create or recover your ACCESS account](../../
 
 Follow [Request a CRC account](../../setup#request-a-crc-account) and wait for CRC to confirm that your account is ready.
 
-### 2. Log in to a CRC front end
+### 2. Log in to the HTCondor front end
 
-Follow [Connect to a CRC front end](../../general#using-the-notre-dame-crc), choose either `crcfe01.crc.nd.edu` or `crcfe02.crc.nd.edu`, and make a note of your choice.
+Review the network and VPN requirements in [Using the Notre Dame CRC](../../general#using-the-notre-dame-crc). Then replace `NETID` with your Notre Dame NetID and log in to the HTCondor front end:
+
+```console
+ssh NETID@condorfe.crc.nd.edu
+```
 
 The "front end" machine is a normal Linux machine, capable of running ordinary applications.
 (Experiment with the `w` and `ps` and `top` commands to view the large number of people and processes running.)
@@ -98,13 +102,9 @@ Try these commands and explore various options to view the state of the cluster 
 
 ### 1. Wait to be added to Anvil
 
-Our ACCESS project CIS261613 and the exchange for Anvil computing resources have been approved. Wait for the class announcement before trying to log in to Anvil.
+The course has an active Anvil allocation. The TA will add you after receiving your ACCESS ID.
 
-The TA will add your ACCESS ID to CIS261613 and enable the Anvil resource for you. This is not something students can do themselves.
-
-Anvil account setup may take a few days after the TA enables the resource. See the [ACCESS guidance](https://allocations.access-ci.org/get-your-first-project).
-
-Check **My Projects** as described in the general guidance. Continue when CIS261613 lists Anvil and shows your Anvil username.
+It may take a few days for your Anvil account to become active. Check **My Projects** and continue when CIS261613 lists Anvil and shows your Anvil username. See the [ACCESS guidance](https://allocations.access-ci.org/get-your-first-project).
 
 ### 2. Log in to Anvil
 
@@ -168,10 +168,9 @@ The job succeeded if `anvil-JOBID.out` names a compute host and `seff` reports `
 Create your repository as described in the [first time setup](../../setup).
 
 In that repository, create a `warmup` directory, and include the following:
-- All the files submitted/created to run a job on the ND CRC.
-- All the files submitted/created to run a job on Purdue Anvil.
-- A README.md file that describes what you did, what the outcomes were,
-and what you learned from the "Explore Further" prompts.
+- `crc-hello.submit`, `crc-hello.out`, `crc-hello.err`, and `crc-hello.log` from the CRC job.
+- `anvil-hello.slurm` and `anvil-JOBID.out` from the Anvil job.
+- A `README.md` that records both job IDs, describes the outcomes, and explains what you learned from Explore Further.
 
 Make sure you have committed and pushed all your work.
 
