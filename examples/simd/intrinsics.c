@@ -23,6 +23,13 @@ double a[SIZE], b[SIZE], c[SIZE];
 
 int main()
 {
+	/* Initialize the inputs so the computation has a known, finite result. */
+	for(int i=0;i<SIZE;i++) {
+		a[i] = 1.0 + (i % 97) * 0.001;
+		b[i] = 2.0 + (i % 89) * 0.001;
+		c[i] = 0.0;
+	}
+
 	/* Repeat the experiment ITER times. */
 	for( int k=0; k<ITER; k++ ) {
 
@@ -36,11 +43,16 @@ int main()
 			/* Add four sets of values */
 		    	__m256d z = _mm256_add_pd(x, y);
 
-			/* Store four values into memory, starting at c[i] */
-		    	_mm256_storeu_pd(&c[i], z);
+			/* Accumulate the result so every repetition affects the output. */
+			__m256d old = _mm256_loadu_pd(&c[i]);
+			_mm256_storeu_pd(&c[i], _mm256_add_pd(old, z));
 		}
 	}
 
-	return a[0];
-}
+	double checksum = 0.0;
+	for(int i=0;i<SIZE;i++)
+		checksum += c[i];
 
+	printf("checksum: %.6f\n", checksum);
+	return 0;
+}

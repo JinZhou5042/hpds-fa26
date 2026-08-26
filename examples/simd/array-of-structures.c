@@ -4,6 +4,8 @@ This version defines each body as a structure, and then makes an array of struct
 Compare this to the alternate approach in structure-of-arrays.c
 */
 
+#include <cstdio>
+
 #ifndef SIZE
 #define SIZE 1024*1024
 #endif
@@ -33,6 +35,11 @@ int main()
 	double force = 3.2;    // constant force applied to each body
 	double deltat = 0.01;  // compute time intervals of 1/100 s
 
+	/* Give every body a finite, nonzero mass. */
+	for(int i=0;i<SIZE;i++) {
+		b[i].mass = 1.0 + (i % 100) * 0.01;
+	}
+
 	/* Repeat the computation ITER times... */
 	for(int k=0;k<ITER;k++) {
 
@@ -45,7 +52,10 @@ int main()
 		}
 	}
 
+	double checksum = 0.0;
+	for(int i=0;i<SIZE;i++)
+		checksum += b[i].position;
+
+	std::printf("checksum: %.6f\n", checksum);
 	return 0;
 }
-
-
