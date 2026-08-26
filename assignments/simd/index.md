@@ -13,7 +13,7 @@ and use at least one of the new operations that you picked above.  Set up a "bas
 
 - Evaluate the performance of the two versions as SIZE changes over a wide range, and plot the results.  Discuss the impact of using SIMD intrinsics.   (Do this on the ND CRC Front-End machines.)  If there isn't a meaningful difference between the two, go back to consider your code and compiler options to understand why.
 
-- Reconsider your baseline code.  Without changing the original code, compile it with various optimization levels (`-O1` through `-O4`) and SIMD instruction sets (`-mmmx` `-msse` `-mavx` `-mavx2`) and `SIZE` values.  Plot the results and discuss -- how does the automatic vectorization compare to your manual efforts?
+- Reconsider your baseline code.  Without changing the original code, compile it with various optimization levels (`-O0` through `-O4`) and SIMD instruction sets (`-mmmx` `-msse` `-mavx` `-mavx2`) and `SIZE` values.  Plot the results and discuss -- how does the automatic vectorization compare to your manual efforts?
 
 - Automatic vectorization only works if the underlying code is "easy" for the compiler to deal with:
 data must be sequential, packed, aligned and operations must be consistent and done in bulk.
