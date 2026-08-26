@@ -21,7 +21,7 @@ Include these materials when they apply:
 - Source code for anything you ran.  (even if examples from the textbook)
 - All scripts needed to build or run the code.  (e.g. shell script, makefile...)
 - Raw data resulting from your experiments. (e.g. runtimes for each configuration)
-- Code to generate the necessary plots. (e.g. matplotlib code or gnuplot file)
+- Code to generate the necessary plots. (e.g. [matplotlib](https://matplotlib.org/stable/gallery/index.html) code or [gnuplot](https://gnuplot.info) file)
 - A `README.md` file that addresses the questions and other objectives of the assignment.
 
 We strongly recommend that you add materials to the repository incrementally as you work,
