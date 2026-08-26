@@ -1,8 +1,5 @@
 /*
-Baseline code: Add two arrays and store in a third.
-We will use this convention across many benchmark programs:
-- SIZE is the logical problem size being computed.
-- ITER is the number of times repeated, to yield a useful measurement.
+Improved code: Use SIMD intrinsics to process the array more efficiently.
 */
 
 #ifndef SIZE 
