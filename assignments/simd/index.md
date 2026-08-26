@@ -6,8 +6,8 @@ First review the [general instructions](../../general) for assignments.
 
 - Consult the [example experiment](../../simd/experiment) that we did in class as a model for organizing your work.
 
-- Write a simple computational kernel that reflects a common computation in an area that you know about (e.g. calculus, physics, chemistry, machine learning...).  Pick something a little more complicated than we did in class,
-and use at least one of the operations that you picked above.  Set up a "baseline" version like we did in class that uses SIZE and ITER, and prints out the elapsed time and checksum.  Adjust the parameters until it runs in 5-10 seconds.  (Make sure to compile this one `-O1` to prevent optimization.)
+- Write a simple code kernel that reflects a common computation in an area that you know about (e.g. calculus, physics, chemistry, machine learning...).  Pick something a little more complicated than we did in class,
+and use at least one of the new operations that you picked above.  Set up a "baseline" version like we did in class that uses SIZE and ITER, and prints out the elapsed time and checksum.  Adjust the parameters until it runs in 5-10 seconds.  (Make sure to compile this one `-O1` to prevent optimization.)
 
 - Write an improved version that uses SIMD intrinsics to perform the kernel computation more efficiently.  Be caureful to ensure that you are computing exactly the same result, producing the same checksum for given values of SIZE and ITER.  (Make sure to compile this one `-O1 -mavx` to prevent optimization but allow your explicit SIMD intrinsics.)
 
