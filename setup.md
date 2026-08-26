@@ -35,6 +35,45 @@ Title: Graduate Course in High Performance Distributed Systems
 PI: Douglas Thain
 ```
 
-You do not need to request your own ACCESS project or exchange ACCESS Credits. Email your name, Notre Dame NetID, and ACCESS ID to the TA at `jzhou24@nd.edu` with the subject `[CSE 60772] ACCESS ID - NETID`, replacing `NETID` with your own NetID.
+The course will provide Anvil resources for all students. Email your name, Notre Dame NetID, and ACCESS ID to the TA at `jzhou24@nd.edu`.
 
 The TA will add your ACCESS ID to the course project. Check **My Projects** in the [ACCESS Allocations portal](https://allocations.access-ci.org/). You can use Anvil after it appears under CIS261613 with a resource username. Provisioning may take some time after you are added.
+
+### Set up SSH access to Anvil
+
+Anvil uses SSH keys for terminal access. Start on your laptop and create a key for Anvil:
+
+```console
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_anvil
+```
+
+Press three Enters until you see the output. The command creates a private key named `id_ed25519_anvil` and a public key named `id_ed25519_anvil.pub`.
+
+Display the public key on macOS or Linux:
+
+```console
+cat ~/.ssh/id_ed25519_anvil.pub
+```
+
+On Windows PowerShell, use:
+
+```console
+Get-Content ~/.ssh/id_ed25519_anvil.pub
+```
+
+Copy the complete line beginning with `ssh-ed25519`. Open [Anvil Open OnDemand](https://ondemand.anvil.rcac.purdue.edu/), log in with your ACCESS identity, and select **Clusters -> Anvil Shell Access**. In the Anvil shell, run:
+
+```console
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+vim ~/.ssh/authorized_keys
+```
+
+Paste the public key into `authorized_keys` and save the file. Then return to your laptop and replace `ANVIL_USERNAME` with the resource username shown in **My Projects**:
+
+```console
+ssh ANVIL_USERNAME@anvil.rcac.purdue.edu
+```
+
+The first connection may ask you to confirm the host key. A successful login opens a shell on an Anvil login node.
+

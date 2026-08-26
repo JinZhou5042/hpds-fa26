@@ -62,9 +62,7 @@ All CRC front ends are shared by many users. A long-running or multicore program
 
 ### Use Purdue Anvil
 
-After completing [Join the course allocation](setup#join-the-course-allocation), open [Anvil Open OnDemand](https://ondemand.anvil.rcac.purdue.edu/), log in with your ACCESS identity, and select **Clusters -> Anvil Shell Access**.
-
-Run these commands after opening the Anvil shell:
+After completing [Set up SSH access to Anvil](setup#set-up-ssh-access-to-anvil), run these commands after logging in:
 
 ```console
 whoami

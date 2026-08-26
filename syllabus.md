@@ -97,7 +97,7 @@ access to a laptop or workstation in the CSE department as a starting point.
 In addition, you must request accounts at these two facilities **during the first week of class** so as to be able to use them throughout the semester.
 
 - [Notre Dame Center for Research Computing (CRC)](https://docs.crc.nd.edu) - Our local campus facility which provess a shared cluster accessible of CPUs and GPUs through SLURM or HTCondor along with parallel storage capability.  This is easy to get started with, and generally has plenty of capacity available early in the semester.  **Beware:** The cluster tends to become highly utilized with long wait times during the last few weeks of the semester.
-- [NSF ACCESS Cyberinfrastructure](https://access-ci.org): A national federation of computing facilities accessible through a common interface. Follow the [setup instructions](setup#join-the-course-allocation) to join the course allocation on Purdue Anvil. Do not request your own ACCESS allocation. Shifting to other facilities during the semester to explore what is available is encouraged.
+- [NSF ACCESS Cyberinfrastructure](https://access-ci.org) - A national federation of computing facilities accessible through a common interface. Follow the [setup instructions](setup#join-the-course-allocation) to join the course allocation on Purdue Anvil. Shifting to other facilities during the semester to explore what is available is encouraged.
 
 ## Grading
 
