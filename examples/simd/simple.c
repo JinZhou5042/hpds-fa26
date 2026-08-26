@@ -16,7 +16,7 @@ int main() {
     for (int i = 0; i < n; i++)
         a[i] = (i % 3) - 1;
 
-    for (int t = 0; t < 10000; t++)
+    for (int t = 0; t < 100000; t++)
         for (int i = 0; i < n; i++)
             s += a[i];
 

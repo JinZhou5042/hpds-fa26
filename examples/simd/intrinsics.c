@@ -11,7 +11,7 @@ ITER is the number of times repeated, to yield a useful measurement.
 #endif
 
 #ifndef ITER
-#define ITER 1000
+#define ITER 100000
 #endif
 
 #include <x86intrin.h>
