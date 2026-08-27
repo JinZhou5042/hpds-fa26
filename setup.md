@@ -72,8 +72,7 @@ vim ~/.ssh/authorized_keys
 Paste the public key into `authorized_keys` and save the file. Then return to your laptop and replace `ANVIL_USERNAME` with the resource username shown in **My Projects**:
 
 ```console
-ssh ANVIL_USERNAME@anvil.rcac.purdue.edu
+ssh -i ~/.ssh/id_ed25519_anvil ANVIL_USERNAME@anvil.rcac.purdue.edu
 ```
 
 The first connection may ask you to confirm the host key. A successful login opens a shell on an Anvil login node.
-
