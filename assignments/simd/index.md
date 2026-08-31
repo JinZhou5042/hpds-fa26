@@ -23,8 +23,9 @@ in a substantial way, while still computing the same result.  Show that change a
 ## Turning In
 
 Commit all of your code, scripts, data, and plots to your course repository
-in a directory called `simd`. Write a `README.md` that ties everything together and addresses the points above.
+in a directory called `simd`. Include a `README.md` that ties everything together and addresses the points above.
 In all things, show insight, curiosity, and craftsmanship.
+Be sure to push everything to GitHub!
 Turn in your work by submitting the URL of your repository to the corresponding
 assignment page in Canvas.
 
