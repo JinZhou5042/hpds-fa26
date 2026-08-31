@@ -4,7 +4,7 @@ First review the [general instructions](../../general) for assignments.
 
 - Explore the [Intel Intrinsics Guide](https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html) and select three interesting operations (i.e. verbs) that we didn't discuss in class.  Describe each one in a paragraph that describes what it does, why it is interesting, and how you might use it in a program.
 
-- Consult the [example experiment](../../examples/simd/experiment) that we did in class as a model for organizing your work.
+- Consult the [example experiment](https://github.com/dthain/hpds-fa26/tree/main/examples/simd/experiment) that we did in class as a model for organizing your work.
 
 - Write a simple code kernel that reflects a common computation in an area that you know about (e.g. calculus, physics, chemistry, machine learning...).  Pick something a little more complicated than we did in class,
 and use at least one of the new operations that you picked above.  Set up a "baseline" version like we did in class that works in a straightforward way, uses SIZE and ITER, and prints out the elapsed time and checksum.  Adjust the parameters until it runs in 5-10 seconds.  (Make sure to compile this one `-O1` to prevent optimization.)
