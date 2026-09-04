@@ -1,4 +1,4 @@
-all: matrix nbody heat fractal nbody
+all: matrix nbody heat fractal nbody nqueens
 
 fractal: fractal.c
 	gcc fractal.c -o fractal -lm -g -O1
@@ -12,5 +12,8 @@ nbody: nbody.c
 matrix: matrix.c
 	g++ matrix.c -o matrix -lm -g -O1
 
+nqueens: nqueens.c
+	g++ nqueens.c -o nqueens -lm -g -O1
+
 clean:
-	rm -f matrix nbody heat fractal
+	rm -f matrix nbody heat fractal nqueens
