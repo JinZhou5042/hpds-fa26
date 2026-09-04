@@ -1,5 +1,5 @@
 
-PROGRAMS=simple-parallel simple-parallel-for simple-parallel-single simple-parallel-section
+PROGRAMS=simple-parallel simple-parallel-for simple-parallel-single simple-parallel-section compute-pi
 
 all: $(PROGRAMS)
 
