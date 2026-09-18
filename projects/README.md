@@ -7,7 +7,7 @@ small set of baseline results together.
 Clone the course repository with its pinned upstream code:
 
 ```bash
-git clone --recurse-submodules https://github.com/JinZhou5042/hpds-fa26.git
+git clone --recurse-submodules https://github.com/dthain/hpds-fa26.git
 ```
 
 For an existing checkout, initialize the code links with:
