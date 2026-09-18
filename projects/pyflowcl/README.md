@@ -1,81 +1,47 @@
 # PyFlowCL
 
-- Domain: compressible and incompressible computational fluid dynamics.
-- Contact: Jonathan MacArt (`jmacart@nd.edu`), who is willing to meet with a
-  matched student.
-- Technical profile: mostly Python, structured 3D meshes, MPI through
-  `mpi4py`, PyTorch arrays and GPU offload, plus selected C++ kernels.
+Compressible and incompressible CFD on structured 3D meshes. Mostly Python,
+with MPI through `mpi4py`, PyTorch arrays on CPU or GPU, and a few C++
+kernels.
 
-## Materials from the owner
+- Contact: Jon MacArt (`jmacart@nd.edu`)
+- Code: `code/`, a snapshot of the `master` branch. There is no public
+  repository.
+- Guides: `data/workstation-setup-pyflow.pdf` (environment),
+  `data/running-pyflowcl.pdf` (running), `data/using-paraview.pdf` (viewing
+  output). Some links in them point to the group's internal wiki.
 
-Jon sent these materials on 2026-09-10; publication permission has since been
-confirmed and they are included here:
-
-- `code/`: the supplied `master` snapshot at revision `98db688ae5f4`.
-- `data/workstation-setup-pyflow.pdf`: Python environment setup, including
-  compiling the pybind module into the pip environment.
-- `data/running-pyflowcl.pdf`: how to run PyFlowCL.
-- `data/using-paraview.pdf`: visualizing output files in ParaView.
-
-Some links in the PDFs point to the group's internal wiki and are not
-reachable, but Jon expects the documents to be sufficient.
-
-## Getting started (from Jon)
+## Getting started
 
 - `master` supports nonreacting compressible flows (for example supersonic
-  flow over a wedge or cone) and some reacting flows.
-- Required: MPI with `mpi4py`, and HDF5 with `h5py`. HYPRE is not needed on
-  `master`.
-- Example drivers are in `verification/`. Start with
-  `verification/shear_layer_2D/`.
-- Keep the CFL number printed at run time, `CFL = u * dt / dx`, below 1.0 and
-  ideally below 0.5. Lower it by reducing `dt` or refining the grid spacing in
-  the driver file.
-- Other working branches add features, including incompressible flow. Their
-  dominant communication patterns differ, so they pose different HPC
-  challenges; Jon is happy to discuss them.
+  flow over a wedge or cone) and some reacting flows. Other branches add
+  features such as incompressible flow. Ask Jon if you want to work with them.
+- You need MPI with `mpi4py` and HDF5 with `h5py`.
+- Example cases are in `code/verification/`. `shear_layer_2D` is a good first
+  one and needs no input data.
+- Keep the CFL number printed at run time below 1, ideally below 0.5, by
+  reducing `dt` or refining the grid.
 
-## Running on CRC
+## Minimal run
 
-No dataset is needed for the 2D shear layer: the driver builds a uniform grid
-and initial condition in code. The only data file in the repository is
-`verification/isotropic_3D/data_dnsbox_64.h5` (10 MB).
-
-Build a CPU-only environment once, on a front end:
+Build a CPU-only environment once, from this directory on a CRC front end:
 
 ```bash
-scripts/setup-env.sh      # creates pyflowcl/env (about 1.3 GB)
+scripts/setup-env.sh
 ```
 
-It loads `python/3.12.13` and `mpich/4.3.2/gcc/11.5.0`, installs PyTorch
-2.14.0 (CPU), NumPy, SciPy, Matplotlib, and h5py from PyPI, builds `mpi4py`
-against MPICH, and compiles the `solver_cpp` extension. The PyPI h5py has no
-MPI-IO, so serial runs write output normally but parallel runs cannot; follow
-`data/workstation-setup-pyflow.pdf` to build HDF5 and h5py from source before
-MPI scaling work. Jon's group has prebuilt CRC environments, but their activation
-instructions are on the internal wiki.
+It installs `h5py` from PyPI, which has no MPI-IO, so only single-rank runs
+can write output. Build HDF5 and `h5py` from source (see the setup guide)
+before running on multiple ranks.
 
-Smoke test, from `crcfe01` or `crcfe02`:
+Then submit the smoke test from `crcfe01` or `crcfe02`:
 
 ```bash
+mkdir -p results
 qsub scripts/run-smoke.sge
 ```
 
-`scripts/driver_smoke.py` reuses the upstream
-`driver_shear_layer_2D_nondimensional.py` configuration but shrinks the grid
-from 2048×2048 to 256×256 and the run from 4000 to 100 steps. Override with
-`NX1`, `NX2`, and `NSTEPS`. Output goes under `results/smoke/`.
-
-It writes HDF5 files with XDMF metadata, readable in ParaView, and logs to
-`results/run-smoke-1thread.uge.log` and `results/run-smoke.uge.log`. The
-initial condition adds unseeded NumPy random perturbations, so repeated runs
-are not bitwise identical.
-
-## Candidate performance questions
-
-- Blocking communication along directional MPI subcommunicators.
-- Cyclic-reduction parallel Thomas algorithm used by the compressible solver;
-  its directional filters reduce available SIMD vectorization.
-- Hypre pressure-Poisson solve in incompressible mode, including all-to-all
-  communication and dominant solver cost. This applies to an incompressible
-  branch, not to `master`.
+`scripts/driver_smoke.py` is the 2D shear layer shrunk to 256×256 and 100
+steps. Change the size with `NX1`, `NX2`, and `NSTEPS`. Output goes to
+`results/smoke/` and opens in ParaView. The initial condition uses unseeded
+random perturbations, so runs are not bitwise identical.

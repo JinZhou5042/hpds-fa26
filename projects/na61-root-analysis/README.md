@@ -1,8 +1,10 @@
 # NA61 ROOT Analysis
 
-- Domain: high-energy physics analysis for the NA61 experiment at CERN and
-  neutrino-flux estimation for the NuMI beam at Fermilab.
+A C++ program built on ROOT that reads a large data file from the NA61
+experiment at CERN, selects events, and produces spectra used to estimate the
+neutrino flux of the NuMI beam at Fermilab.
+
 - Contacts: Michael Quintieri (`mquintie@nd.edu`) and Laura Fields
-  (`lfields2@nd.edu`).
-- Technical profile: a C++ program built against ROOT reads a large data file,
-  selects events, and produces spectra used downstream.
+  (`lfields2@nd.edu`)
+
+Code and data are not available yet.

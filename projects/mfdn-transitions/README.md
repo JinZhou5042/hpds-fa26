@@ -1,29 +1,27 @@
 # MFDn Transitions
 
-- Domain: nuclear-physics wave-function postprocessing.
-- Contact: Mark Caprio (`mcaprio@nd.edu`).
-- Code: <https://github.com/nd-nuclear-theory/mfdn-transitions>
-- Small example: <https://github.com/nd-nuclear-theory/mfdn-transitions/tree/master/doc/examples/example-transitions-01>
-- Technical profile: Fortran with hybrid MPI/OpenMP parallelism. Production
-  runs may consume terabytes of input and use hundreds of ranks; much of the
-  work is nearly embarrassingly parallel with reductions.
+Postprocessing of nuclear wave functions from MFDn to compute transition
+matrix elements. Fortran with hybrid MPI/OpenMP. Production runs read
+terabytes of input on hundreds of ranks, and most of the work is close to
+embarrassingly parallel, with reductions at the end.
 
-## Running it
+- Contact: Mark Caprio (`mcaprio@nd.edu`)
+- Code: <https://github.com/nd-nuclear-theory/mfdn-transitions>, pinned as
+  the `code/` submodule
+- Input: the repository's small
+  [`example-transitions-01`](https://github.com/nd-nuclear-theory/mfdn-transitions/tree/master/doc/examples/example-transitions-01)
+  case. Production inputs are much larger, ask Mark if you want one.
 
-The repository's included `example-transitions-01` case builds and runs on
-CRC using four MPI ranks and eight OpenMP threads per rank. Meaningful
-performance work will need a larger representative input from the project
-owner.
+## Minimal run
 
-## Included materials
-
-- `code/`: upstream Git submodule pinned at `dbe217c`.
-- `scripts/build.sh`: CRC Intel MPI/GSL build.
-- `scripts/mfdn-small-crc.sh`: four-rank, eight-thread-per-rank validation job.
-- `results/`: reference run input, logs, matrix element, and result files.
-
-On a CRC front end, run `scripts/build.sh`, then submit from this directory:
+From this directory on a CRC front end:
 
 ```bash
+scripts/build.sh
+mkdir -p results
 qsub scripts/mfdn-small-crc.sh
 ```
+
+The job runs the example on one node with 4 MPI ranks and 8 OpenMP threads
+per rank, and writes to `results/run/`. The example ships with reference
+output to compare against.

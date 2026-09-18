@@ -1,94 +1,66 @@
 # Course Projects
 
-For each of these starter projects, we need the following information
-collected:
-- Contact: prof or grad student who is willing to meet once with students to
-  go over details.
-- Name: name of software or project.
-- Purpose: a few sentences about the scientific purpose of the software.
-- Link to code.
-- Link to dataset, or instructions if needed.
+Starter projects from research groups at Notre Dame. Each one has a contact
+in the group who can meet with you to go over the science and the code.
 
-Each project folder keeps the source code, input data, scripts, and baseline
-results together.
+Each folder has the code (or a pointer to it), a small input, and scripts for
+a minimal run on CRC. That run is only a starting point. What to scale up,
+what to measure, and what to improve is up to you.
 
-Clone the course repository with its pinned upstream code:
+Clone the course repository with its submodules:
 
 ```bash
 git clone --recurse-submodules https://github.com/dthain/hpds-fa26.git
 ```
 
-For an existing checkout, initialize the code links with:
+If you already cloned it without them:
 
 ```bash
 git submodule update --init --recursive
 ```
 
-## Working well with a minimal dataset (5)
+## Projects
 
-- Contact: David Richter (`David.Richter.26@nd.edu`)
-  Name: [CM1LP](cm1lp/)
-  Purpose: Atmospheric modeling with moving particles (rain, cloud droplets, spray) added to the CM1 solver. Fortran with MPI and OpenACC GPU acceleration.
-  Link to code: https://github.com/RichterLab/CM1LP, a git submodule pinned to `codex-branch` at `2cc680c`.
-  Link to dataset: owner-supplied CRC submission script and verification namelist. Runs on CRC with 128 MPI ranks (~1026s total), with load imbalance (25%) and MPI communication (22%) as the largest cost categories.
-  Scripts and baseline results: CRC build and 128-rank run, done.
+- Name: [CM1LP](cm1lp/)
+  Contact: David Richter (`David.Richter.26@nd.edu`)
+  Purpose: The CM1 atmospheric model extended with particles that represent rain, cloud droplets, or spray. Fortran with MPI and OpenACC.
+  Code: <https://github.com/RichterLab/CM1LP> (`codex-branch`), included as a submodule.
+  Data: `cm1lp/data/namelist.input`, a 128³ Pi Chamber case.
 
-- Contact: Jon MacArt (`jmacart@nd.edu`)
-  Name: [PyFlowCL](pyflowcl/)
-  Purpose: Compressible/incompressible computational fluid dynamics. Python, MPI (mpi4py), PyTorch/GPU offload, selected C++ kernels.
-  Link to code: private repository, code shared by email (`master`, revision `98db688ae5f4`), included directly since it has no public upstream URL. Must stay out of the public course repo. The student working on PyFlowCL will contact Jon directly once matched.
-  Link to dataset: none needed for the 2D shear layer verification case (grid built in code), plus the included HDF5 input and three manuals.
-  Scripts and baseline results: environment setup and a CPU-only smoke test, 1 vs 8 threads, done.
+- Name: [PyFlowCL](pyflowcl/)
+  Contact: Jon MacArt (`jmacart@nd.edu`)
+  Purpose: Compressible and incompressible CFD on structured meshes. Python with `mpi4py` and PyTorch, plus some C++ kernels.
+  Code: included in `pyflowcl/code/`. There is no public repository.
+  Data: none needed for the 2D shear layer case, which builds its grid in code. Setup and usage guides are in `pyflowcl/data/`.
 
-- Contact: Mark Caprio (`mcaprio@nd.edu`)
-  Name: [MFDn Transitions](mfdn-transitions/)
-  Purpose: Nuclear-physics wave-function transition postprocessing. Fortran with hybrid MPI/OpenMP.
-  Link to code: https://github.com/nd-nuclear-theory/mfdn-transitions, a git submodule pinned at `dbe217c`.
-  Link to dataset: repository's included `example-transitions-01` case. Mark offered larger "heavy duty" production input, not yet requested.
-  Scripts and baseline results: CRC build and a 4 MPI ranks x 8 OpenMP threads run, output matches the checked-in reference.
+- Name: [MFDn Transitions](mfdn-transitions/)
+  Contact: Mark Caprio (`mcaprio@nd.edu`)
+  Purpose: Postprocessing of nuclear wave functions from MFDn to compute transition matrix elements. Fortran with hybrid MPI/OpenMP.
+  Code: <https://github.com/nd-nuclear-theory/mfdn-transitions>, included as a submodule.
+  Data: the repository's small `example-transitions-01` case. Production inputs are much larger, ask Mark if you want one.
 
-- Contact: Tarrick Qahash (`tqahash@nd.edu`)
-  Name: [QTL Workflow](qtl-workflow/)
-  Purpose: Genetic linkage mapping (QTL) and mutation search in LOD intervals. R (`qtl` / `rqtl2`).
-  Link to code: owner-supplied `ClassCode/QTL_Code.R`.
-  Link to dataset: owner-supplied CSV plus the full VCF. The VCF exceeds GitHub's per-file limit even after gzip, so it's stored as two checked, lossless parts under `qtl-workflow/data/`, run `qtl-workflow/scripts/restore-vcf.sh` to reconstruct it.
-  Scripts and baseline results: minimal run and a 1,000-permutation run, both done, chromosome 7 peak confirmed by Tarrick as expected for chloroquine. Still deciding whether to modernize to `rqtl2` or parallelize VCF/gene-interval processing, our call, not something we're waiting on Tarrick for.
+- Name: [QTL Workflow](qtl-workflow/)
+  Contact: Tarrick Qahash (`tqahash@nd.edu`)
+  Purpose: QTL mapping of drug response in a *Plasmodium falciparum* genetic cross, then a search for genes and mutations inside the QTL intervals. R.
+  Code: `qtl-workflow/code/QTL_Code.R`.
+  Data: genotype and phenotype CSVs plus the full VCF in `qtl-workflow/data/`.
 
-- Contact: Bharat Mishra (`bmishra2@nd.edu`)
-  Name: [GBCF nf-core RNA-seq](gbcf-nf-core-rnaseq/)
-  Purpose: NGS pipeline performance, scheduling, and scaling on CRC.
-  Link to code: https://github.com/nf-core/rnaseq, a git submodule pinned to release 3.26.0 at `e7ca462`.
-  Link to dataset: upstream `test` profile downloads only so far (smoke test, ~25 MB). Bharat has several interesting large datasets and will share one via the CRC shared file system when ready. A specific performance question still needs to come from him.
-  Scripts and baseline results: container prefetch and CRC launchers, runs end to end on Grid Engine and HTCondor.
-  Note: dropped Bharat's other two offers, FreeCount and Amplicon Explorer. They're both thin R/Shiny stats apps with little real HPC story, and sticking with just nf-core keeps us from splitting Bharat across three student groups.
+- Name: [GBCF nf-core RNA-seq](gbcf-nf-core-rnaseq/)
+  Contact: Bharat Mishra (`bmishra2@nd.edu`)
+  Purpose: Running a production RNA-seq pipeline (Nextflow with containers) on CRC, looking at scheduling, resource use, and scaling.
+  Code: <https://github.com/nf-core/rnaseq> (release 3.26.0), included as a submodule.
+  Data: the pipeline's small built-in `test` profile. Bharat has larger real datasets and will share one on the CRC shared file system.
 
-## Waiting on the owner (4)
+- Name: [BSA and Variant Analysis](bsa-variant-analysis/)
+  Contact: Nirjhar Bhattacharyya (`nbhattac@nd.edu`)
+  Purpose: Bulk segregant analysis of a *Plasmodium falciparum* genetic cross, computing and smoothing allele frequencies across about 100 bulk samples. R.
+  Code: <https://github.com/NirjharBhattacharyya/Bulk_Segregation_Analysis_Ferdig_Lab>. The repository is private, ask Nirjhar for access.
+  Data: a SNP table with 12,803 variants in `bsa-variant-analysis/data/`.
 
-- Contact: Nirjhar Bhattacharyya (`nbhattac@nd.edu`)
-  Name: [BSA and Variant Analysis](bsa-variant-analysis/)
-  Purpose: Bulk segregant analysis of a *Plasmodium falciparum* genetic cross. R workflow.
-  Link to code: [owner's GitHub repository](https://github.com/NirjharBhattacharyya/Bulk_Segregation_Analysis_Ferdig_Lab), pinned at `24aa27e`. Owner has data and code, access invite is pending.
-  Link to dataset: owner-supplied SNP table already in hand (26.7 MB). Baseline run shows a clear bottleneck, the MAD outlier filter, 86% of runtime.
-  Scripts and baseline results: Grid Engine and HTCondor launchers, done.
-  Status: have the data, waiting for GitHub repo access.
+## Other directions
 
-- Contact: Michael Quintieri (`mquintie@nd.edu`) and Laura Fields (`lfields2@nd.edu`)
-  Name: [NA61 ROOT Analysis](na61-root-analysis/)
-  Purpose: High-energy physics event analysis for NA61 at CERN and NuMI neutrino-flux estimation. C++/ROOT.
-  Link to code: not yet received.
-  Link to dataset: not yet received.
-  Status: Michael is seeking approval from his collaboration to share code and data.
+These have a contact, but code and data are not available yet.
 
-- Contact: Peter Kogge (`Peter.M.Kogge.1@nd.edu`)
-  Name: [Subgraph Isomorphism](subgraph-isomorphism/)
-  Purpose: Graph subgraph-isomorphism codes comparing an FPGA-oriented system with conventional HPC systems (HPEC 2024).
-  Link to code: not yet received.
-  Link to dataset: not yet received.
-  Status: no reply despite a couple of follow-ups.
-
-- Contact: Peter Kogge (`Peter.M.Kogge.1@nd.edu`)
-  Name: [Persistent Homology / TDA](persistent-homology/)
-  Purpose: High-performance topological data analysis.
-  Link to code: no implementation selected yet.
-  Link to dataset: not yet received.
-  Status: same silence as Subgraph Isomorphism, and still exploratory, no concrete implementation picked yet.
+- [NA61 ROOT Analysis](na61-root-analysis/): C++/ROOT event selection for the NA61 experiment at CERN, used for NuMI neutrino-flux estimation. Michael Quintieri (`mquintie@nd.edu`) and Laura Fields (`lfields2@nd.edu`).
+- [Subgraph Isomorphism](subgraph-isomorphism/): subgraph-isomorphism codes used to compare an FPGA-oriented system with conventional HPC systems. Peter Kogge (`Peter.M.Kogge.1@nd.edu`).
+- [Persistent Homology / TDA](persistent-homology/): high-performance topological data analysis. Peter Kogge (`Peter.M.Kogge.1@nd.edu`).

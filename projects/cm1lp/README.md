@@ -1,36 +1,25 @@
 # CM1LP
 
-- Domain: atmospheric modeling and particle-laden flow.
-- Contact: David Richter (`David.Richter.26@nd.edu`).
-- Code: <https://github.com/RichterLab/CM1LP>
-- Technical profile: Fortran atmospheric solver using MPI and OpenACC with
-  GPU acceleration. The RichterLab version adds moving particles representing
-  droplets such as rain, cloud droplets, or spray.
+CM1 is an atmospheric model for simulating clouds and storms. The RichterLab
+version adds moving particles that represent droplets such as rain, cloud
+droplets, or spray. Fortran, parallelized with MPI and with OpenACC for GPUs.
 
-## Known starting point
+- Contact: David Richter (`David.Richter.26@nd.edu`)
+- Code: <https://github.com/RichterLab/CM1LP>, `codex-branch`, pinned as the
+  `code/` submodule
+- Input: `data/namelist.input`, a 128³ Pi Chamber case
 
-The owner identified the repository's `codex-branch` as the intended starting
-point. A CRC submission script and verification input were supplied by email.
-The portable scripts are in `scripts/`, the input is `data/namelist.input`,
-and the pinned upstream source is the `code/` submodule. Its `src` directory contains a
-Makefile intended to work with the modules loaded by the submission script.
+## Minimal run
 
-Grid Engine validation and submission for this project must be run from
-`crcfe01.crc.nd.edu` or `crcfe02.crc.nd.edu`. Do not run `qsub` from
-`condorfe.crc.nd.edu`; it is not an authorized Grid Engine submit host.
+From this directory on `crcfe01` or `crcfe02`:
 
-## Running it
+```bash
+scripts/build.sh
+mkdir -p results
+qsub scripts/run-baseline.sge
+```
 
-The owner's verification case is built from `codex-branch` (commit
-`2cc680c`). Build with `scripts/build.sh`, then submit
-`scripts/run-baseline.sge` from this directory (128 MPI ranks,
-`-pe mpi-64 128`, 64 ranks on each of two hosts). Logs and outputs land in
-`results/`.
-
-## Included materials
-
-- `code/`: Git submodule at commit `2cc680c` on `codex-branch`.
-- `data/namelist.input`: owner-provided 128³ Pi-chamber configuration.
-- `scripts/build.sh`: reproducible Intel MPI/NetCDF build on CRC.
-- `scripts/run-baseline.sge`: portable 128-rank Grid Engine job.
-- `results/`: module, build, timing, checksum, and compact model evidence.
+`build.sh` compiles with Intel MPI and NetCDF into `build/cm1.exe`. The job
+runs on 128 MPI ranks across two nodes and writes to `results/baseline-run/`.
+Grid Engine jobs have to be submitted from `crcfe01` or `crcfe02`, not
+`condorfe`.
