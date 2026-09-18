@@ -1,3 +1,0 @@
-ifx (IFX) 2025.3.2 20260112
-Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
-

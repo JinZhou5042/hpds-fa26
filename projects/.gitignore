@@ -1,17 +1,1 @@
-# Recreated environments and build products
-*/.R-library/
-*/.apptainer/
-*/.nextflow/
-*/build/
-*/env/
-
-# Fresh run directories (compact verified evidence is tracked separately)
-*/results/baseline/
-*/results/baseline-recheck/
-*/results/smoke/
-*/results/test-run/
-*/results/test-run-sge/
-
-# Reconstructed from the checked QTL archive parts
-qtl-workflow/data/hb3_dd2.gatk.final.vcf
-qtl-workflow/data/hb3_dd2.gatk.final.vcf.gz
+*/results/

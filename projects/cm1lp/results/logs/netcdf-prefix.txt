@@ -1,1 +1,0 @@
-/afs/crc.nd.edu/x86_64_linux/n/netcdf/4.9.2/intel/24.2/serial
