@@ -69,18 +69,10 @@ qsub scripts/run-smoke.sge
 from 2048×2048 to 256×256 and the run from 4000 to 100 steps. Override with
 `NX1`, `NX2`, and `NSTEPS`. Output goes under `results/smoke/`.
 
-Ran with one MPI rank, comparing 1 vs 8 threads:
-
-| Threads | Solve time | Per 10 steps |
-| --- | --- | --- |
-| 1 | 31.9 s | 3.5 s |
-| 8 | 24.7 s | 2.7 s |
-
-Both runs kept CFL near 0.223 and wrote 11 HDF5 files with XDMF metadata
-(56 MB), one every 10 steps, readable in ParaView. All fields were finite and
-evolved from the initial state. The initial condition adds unseeded NumPy
-random perturbations, so repeated runs are not bitwise identical. Logs are in
-`results/run-smoke-1thread.uge.log` and `results/run-smoke.uge.log`.
+It writes HDF5 files with XDMF metadata, readable in ParaView, and logs to
+`results/run-smoke-1thread.uge.log` and `results/run-smoke.uge.log`. The
+initial condition adds unseeded NumPy random perturbations, so repeated runs
+are not bitwise identical.
 
 ## Candidate performance questions
 

@@ -21,16 +21,13 @@ Grid Engine validation and submission for this project must be run from
 `crcfe01.crc.nd.edu` or `crcfe02.crc.nd.edu`. Do not run `qsub` from
 `condorfe.crc.nd.edu`; it is not an authorized Grid Engine submit host.
 
-## Verified baseline
+## Running it
 
-The owner's verification case was built from `codex-branch` (commit
-`2cc680c`) and run on CRC with 128 MPI ranks (`-pe mpi-64 128`,
-64 ranks on each of two hosts). It completed normally with a CM1
-total time of 1,026 seconds (about 17 minutes). Load imbalance (25%) and MPI
-communication (22%) were the largest timing categories, a natural starting
-point for a scaling question. Build with `scripts/build.sh`, then submit
-`scripts/run-baseline.sge` from this directory. Sanitized logs and compact
-outputs from the verified run are in `results/`.
+The owner's verification case is built from `codex-branch` (commit
+`2cc680c`). Build with `scripts/build.sh`, then submit
+`scripts/run-baseline.sge` from this directory (128 MPI ranks,
+`-pe mpi-64 128`, 64 ranks on each of two hosts). Logs and outputs land in
+`results/`.
 
 ## Included materials
 

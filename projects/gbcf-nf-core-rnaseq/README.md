@@ -69,30 +69,6 @@ The job writes to `results/test-run/`. CRC's HTCondor slots can be
 preempted at any time. After an eviction the job restarts, and `run-test.sh`
 resumes the existing Nextflow session instead of starting over.
 
-## Validation results
-
-| Run | Host | Tasks | Wall time |
-| --- | --- | --- | --- |
-| Grid Engine, from scratch | `d12chas325`, 8 slots | 234 completed | 7m 44s |
-| HTCondor, evicted once | `qa-l40s-007`, then `d32cepyc037` | 164 completed + 70 resumed | 5m 11s + 4m 22s |
-
-From the Grid Engine trace (`results/trace.txt`), task run times sum to 795 s
-and the largest peak RSS is 4.1 GB (`PICARD_MARKDUPLICATES`).
-The largest contributors are:
-
-| Process | Tasks | Total run time | Peak RSS |
-| --- | --- | --- | --- |
-| `STAR_ALIGN` | 5 | 315 s | 951 MB |
-| `BBMAP_BBSPLIT` | 6 | 115 s | 1.4 GB |
-| `MULTIQC` | 1 | 51 s | 1.1 GB |
-| `PICARD_MARKDUPLICATES` | 5 | 30 s | 4.1 GB |
-
-Both runs produced BAM files, bigWigs, QC reports, and merged gene count
-tables for 5 samples and 125 genes. The MultiQC report is at
-`results/multiqc/star_salmon/multiqc_report.html`. Salmon-only counts are
-identical between the runs; STAR + Salmon counts and TPMs differ by at most
-0.09% relative, consistent with multithreaded alignment and quantification.
-
 ## Files
 
 - `scripts/prefetch-containers.sh`: pull or check container images.
