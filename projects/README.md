@@ -92,10 +92,3 @@ git submodule update --init --recursive
   Link to code: no implementation selected yet.
   Link to dataset: not yet received.
   Status: same silence as Subgraph Isomorphism, and still exploratory, no concrete implementation picked yet.
-
-## Not yet a concrete candidate
-
-- Kevin Lannon (TopEFT or similar): initial contact made, no project direction has materialized yet.
-- Tijana Milenkovic: not heard back from yet.
-- Andrew Kennedy: not heard back from yet.
-- Tim Weninger: not heard back from yet.
