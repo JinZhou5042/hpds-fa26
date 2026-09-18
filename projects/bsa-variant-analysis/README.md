@@ -6,10 +6,10 @@
   *Plasmodium falciparum* genetic cross (MAL31 × KH004). The owner chose this
   BSA workflow over the broader variant-processing alternative.
 - Code: [owner GitHub repository](https://github.com/NirjharBhattacharyya/Bulk_Segregation_Analysis_Ferdig_Lab),
-  validated at `24aa27e` (2026-06-11). Clone it into `code/upstream` as shown
+  validated at `24aa27e`. Clone it into `code/upstream` as shown
   in `code/README.md`. The owner named `BSA_OPTIMISATION_MAL_KH` as the
-  starting script. Anonymous access still returned 404 on 2026-09-17, so the
-  GitHub repository visibility must still be switched to public.
+  starting script. The repository is private, students will need to ask
+  Nirjhar for GitHub access before they can clone it.
 
 ## Input data
 
