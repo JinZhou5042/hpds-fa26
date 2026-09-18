@@ -1,5 +1,6 @@
 /*
- * From this topic directory:
+ * From this topic directory. CPU only, so it runs directly on the CRC front
+ * end or the Anvil login node; no HTCondor or Slurm job is needed:
  *   make 1.1_cpu_vector_add
  *   ./1.1_cpu_vector_add
  *

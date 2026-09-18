@@ -1,8 +1,15 @@
 /*
- * From this topic directory:
+ * From this topic directory (see ../README.md for details).
+ *
+ * HTCondor (Notre Dame CRC): build on the front end, run on a GPU worker
  *   module load cuda/12.1
  *   make 4.3_shared_memory
  *   ./4.3_shared_memory
+ *
+ * Slurm (Purdue Anvil): build on the login node, run with sbatch
+ *   module load modtree/gpu cuda/12.8.0
+ *   make 4.3_shared_memory
+ *   sbatch ../common/anvil_gpu.slurm ./4.3_shared_memory
  *
  * Section 4.3: Cooperative loading and reuse in shared memory
  *
