@@ -38,6 +38,10 @@ The QTL VCF exceeds GitHub's per-file limit even after gzip compression. It is
 stored as two checked, lossless parts under `qtl-workflow/data/`; run
 `qtl-workflow/scripts/restore-vcf.sh` to reconstruct the original VCF.
 
+Bharat Mishra has several interesting large datasets for the GBCF nf-core
+RNA-seq pipeline and will share one through the CRC shared file system when
+ready, in place of the built-in test profile currently listed above.
+
 ## Contacts
 
 - CM1LP: David Richter (`David.Richter.26@nd.edu`)
