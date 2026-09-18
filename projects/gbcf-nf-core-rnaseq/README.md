@@ -6,8 +6,6 @@
   (commit `e7ca462`), pinned as the `code/` submodule. Bharat suggested it as a more
   complex, memory-intensive workflow than the smaller GBCF examples; the
   `scRNA_Seq_explorer` alternative he shared is not being pursued.
-- Course fit: workflow-level performance, scheduling, data movement, resource
-  tuning, and scaling.
 
 ## Current status
 

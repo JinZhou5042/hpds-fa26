@@ -7,8 +7,6 @@
 - Technical profile: Fortran with hybrid MPI/OpenMP parallelism. Production
   runs may consume terabytes of input and use hundreds of ranks; much of the
   work is nearly embarrassingly parallel with reductions.
-- Course fit: evaluate new hardware, investigate data handling and reduction
-  costs, and contrast the small reproducible case with realistic scaling.
 
 ## Project packet
 

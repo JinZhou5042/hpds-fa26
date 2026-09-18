@@ -5,8 +5,6 @@
 - Technical profile: R-based multiple-QTL modeling and/or a workflow that
   finds QTL peaks, searches genes in LOD intervals, and examines mutations
   using VCF and reference-genome data.
-- Course fit: modernize an older MQM workflow to `rqtl2`, or parallelize the
-  repeated VCF/gene-interval processing.
 
 ## Included materials
 

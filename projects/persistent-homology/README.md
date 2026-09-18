@@ -7,8 +7,6 @@
   DOI `10.1109/TKDE.2022.3147070`.
 - Technical profile: exploratory direction based on persistent-homology
   workloads being studied by a member of the Kogge group.
-- Course fit: possible algorithmic, memory, or scaling analysis once a
-  concrete implementation and dataset are selected.
 
 ## Project packet
 

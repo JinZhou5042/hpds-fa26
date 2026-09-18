@@ -6,8 +6,6 @@
 - Technical profile: Fortran atmospheric solver using MPI and OpenACC with
   GPU acceleration. The RichterLab version adds moving particles representing
   droplets such as rain, cloud droplets, or spray.
-- Course fit: compare hardware or GPU behavior, measure MPI/OpenACC scaling,
-  locate bottlenecks, or evaluate alternative parallel strategies.
 
 ## Known starting point
 

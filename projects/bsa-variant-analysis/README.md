@@ -66,14 +66,3 @@ intermediate and smoothed allele-frequency CSVs, a per-sample summary,
 
 An HTCondor version is also available: `scripts/run-bsa-condor.sh` and
 `scripts/run-bsa-condor.submit`, writing to `results/baseline-recheck/`.
-
-## Course fit
-
-The MAD outlier filter takes 86% of the runtime. For each sample it calls
-`median()` and `mad()` on a new 101-value window at every position: about
-12,700 windows × 114 samples, or 1.45 million calls. The window spans
-chromosome boundaries, and the samples are independent. Students can start
-with single-node work (incremental or compiled rolling statistics,
-vectorization) and parallelism across samples, then scale to more samples,
-replicates, window sizes, or permutation runs on CRC. Smoothing, which the
-owner expected to be expensive, took only 3.7 s on this dataset.

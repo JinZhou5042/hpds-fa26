@@ -5,9 +5,6 @@
   matched student.
 - Technical profile: mostly Python, structured 3D meshes, MPI through
   `mpi4py`, PyTorch arrays and GPU offload, plus selected C++ kernels.
-- Course fit: exposes concrete computation/communication bottlenecks while
-  remaining more approachable than the group's asynchronous unstructured-mesh
-  solver.
 
 ## Materials from the owner
 

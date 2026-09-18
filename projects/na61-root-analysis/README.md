@@ -6,8 +6,6 @@
   (`lfields2@nd.edu`).
 - Technical profile: a C++ program built against ROOT reads a large data file,
   selects events, and produces spectra used downstream.
-- Course fit: an intentionally inefficient, portable analysis stage offers a
-  tractable target for profiling, data-access analysis, and parallelization.
 
 ## Project packet
 

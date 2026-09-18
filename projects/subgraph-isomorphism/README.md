@@ -7,8 +7,6 @@
   DOI `10.1109/HPEC62836.2024.10938488`.
 - Technical profile: subgraph-isomorphism codes and datasets previously used
   to compare an FPGA-oriented system with large conventional HPC systems.
-- Course fit: profiling, algorithm/architecture comparison, scaling, and
-  evaluation of heterogeneous implementations.
 
 ## Project packet
 
