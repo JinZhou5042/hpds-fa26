@@ -28,8 +28,7 @@ Rscript -e 'install.packages("qtl", lib=".R-library", repos="https://cloud.r-pro
 Rscript scripts/minimal-run.R > results/minimal-run.log 2>&1
 ```
 
-Package installation is only needed once. The run was verified on 2026-09-07
-on `condorfe.crc.nd.edu` with R 4.4.0 and qtl 1.74. It uses the supplied
+Package installation is only needed once. It uses the supplied
 CSV and the original script's second phenotype (`CQ..IC50.`), Haley-Knott
 scan, and batch size, with a fixed seed and only 10 permutations.
 It reads 37 individuals, 625 markers, and 14 chromosomes and writes
@@ -44,7 +43,7 @@ chromosome 13 include duplicate positions. These warnings are retained in
 the log; the supplied data and original `code/QTL_Code.R` are unchanged.
 
 The minimal run verifies basic execution and finite scan/permutation output.
-Tarrick confirmed on 2026-09-07 that the observed chromosome 7 peak is
+Tarrick confirmed that the observed chromosome 7 peak is
 expected for chloroquine. This is an owner confirmation, not a numerical
 comparison against a supplied reference file. Ten permutations are only a
 smoke test; use the run below for the original permutation count.
@@ -57,9 +56,9 @@ After the environment setup above, run:
 Rscript scripts/permutation-run.R > results/permutation-1000.log 2>&1
 ```
 
-Verified on 2026-09-07 with the same host, R version, package, input,
+Uses the same host, R version, package, input,
 phenotype, and scan parameters as the minimal run. The seed is 20260907.
-All 1,000 permutation values were finite; the 625-marker scan output
+All 1,000 permutation values were finite, and the 625-marker scan output
 matched the minimal run exactly. Outputs are in `results/permutation-1000/`:
 
 - `scanone.csv`: observed LOD scores.

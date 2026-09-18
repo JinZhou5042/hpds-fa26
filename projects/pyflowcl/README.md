@@ -69,7 +69,7 @@ qsub scripts/run-smoke.sge
 from 2048×2048 to 256×256 and the run from 4000 to 100 steps. Override with
 `NX1`, `NX2`, and `NSTEPS`. Output goes under `results/smoke/`.
 
-Verified 2026-09-14 on `d12chas` nodes (serial, one MPI rank):
+Ran with one MPI rank, comparing 1 vs 8 threads:
 
 | Threads | Solve time | Per 10 steps |
 | --- | --- | --- |

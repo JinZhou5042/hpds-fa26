@@ -19,9 +19,9 @@ baseline scaling, resource limits, and a bounded optimization objective.
 ## Initial validation
 
 The repository's included `example-transitions-01` case was built and run
-successfully on CRC on 2026-08-31 using four MPI ranks and eight OpenMP threads
+successfully on CRC using four MPI ranks and eight OpenMP threads
 per rank. Its matrix elements matched the checked-in reference output. This
-establishes a working student starting point; meaningful performance work will
+establishes a working student starting point. Meaningful performance work will
 need a larger representative input from the project owner.
 
 ## Included materials

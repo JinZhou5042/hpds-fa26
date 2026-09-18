@@ -64,11 +64,9 @@ The job writes `results/baseline.log` and, in `results/baseline/`, the
 intermediate and smoothed allele-frequency CSVs, a per-sample summary,
 `CQ BSA.pdf`, `timings.csv`, and `sessionInfo.txt`.
 
-Verified on 2026-09-14 on `d32cepyc236.crc.nd.edu` (Grid Engine `long`
-queue, one slot) with R 4.4.0, dplyr 1.2.1, locfit 1.5.9.12, reshape2 1.4.5,
-doBy 4.7.2, and ggplot2 4.0.3. Output shapes match the dimensions printed in
-the original session (12,803 × 118 after filtering, 12,803 × 221 after
-smoothing). Two samples, FG.BC.0237 and FG.BC.0330, have no depth values and
+Output shapes match the dimensions printed in the original session (12,803 ×
+118 after filtering, 12,803 × 221 after smoothing). Two samples, FG.BC.0237
+and FG.BC.0330, have no depth values and
 drop out of the summary, leaving 112 rows. In the CQ plot, the dosed pools
 show a dose-dependent drop in Mal31 allele frequency on chromosome 7. This is
 a plausibility check only, not a comparison with owner-supplied reference
@@ -88,11 +86,11 @@ output.
 
 Peak memory was 553 MB. These are single-run timings on one core.
 
-Rechecked on 2026-09-16 via HTCondor from `condorfe`, using authenticated
-`git` access to the now-shared repository rather than the owner-emailed
-copy. Total time was 155.2 s (mad_filter 134.1 s, 86%), consistent with the
-Grid Engine baseline above. Scripts: `scripts/run-bsa-condor.sh` and
-`scripts/run-bsa-condor.submit`; output goes to `results/baseline-recheck/`.
+Rechecked via HTCondor, using authenticated `git` access to the now-shared
+repository rather than the owner-emailed copy. Total time was 155.2 s
+(mad_filter 134.1 s, 86%), consistent with the Grid Engine baseline above.
+Scripts: `scripts/run-bsa-condor.sh` and `scripts/run-bsa-condor.submit`,
+output goes to `results/baseline-recheck/`.
 
 ## Course fit
 

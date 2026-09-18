@@ -69,7 +69,7 @@ The job writes to `results/test-run/`. CRC's HTCondor slots can be
 preempted at any time. After an eviction the job restarts, and `run-test.sh`
 resumes the existing Nextflow session instead of starting over.
 
-## Validation results (2026-09-14)
+## Validation results
 
 | Run | Host | Tasks | Wall time |
 | --- | --- | --- | --- |

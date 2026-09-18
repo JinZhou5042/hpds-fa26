@@ -24,8 +24,8 @@ Grid Engine validation and submission for this project must be run from
 ## Verified baseline
 
 The owner's verification case was built from `codex-branch` (commit
-`2cc680c`) and run on CRC on 2026-08-31 with 128 MPI ranks (`-pe mpi-64 128`,
-64 ranks on each of two `d32cepyc` hosts). It completed normally with a CM1
+`2cc680c`) and run on CRC with 128 MPI ranks (`-pe mpi-64 128`,
+64 ranks on each of two hosts). It completed normally with a CM1
 total time of 1,026 seconds (about 17 minutes). Load imbalance (25%) and MPI
 communication (22%) were the largest timing categories, a natural starting
 point for a scaling question. Build with `scripts/build.sh`, then submit
