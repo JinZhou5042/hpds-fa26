@@ -1,14 +1,14 @@
 .PHONY: all clean
 
-all: 1.1_cpu_vector_add 1.2_kernel_launch 1.3_global_indices \
+all: 1.1_cpu_vector_add 1.2_hello_world 1.3_global_indices \
 	1.4_device_memory 1.5_vector_add 1.6_correctness \
 	1.7_function_qualifiers overall
 
 1.1_cpu_vector_add: 1.1_cpu_vector_add.cpp
 	g++ -O2 -std=c++17 -Wall -Wextra 1.1_cpu_vector_add.cpp -o 1.1_cpu_vector_add
 
-1.2_kernel_launch: 1.2_kernel_launch.cu ../common/cuda_helpers.h
-	nvcc -O3 -std=c++17 1.2_kernel_launch.cu -o 1.2_kernel_launch
+1.2_hello_world: 1.2_hello_world.cu ../common/cuda_helpers.h
+	nvcc -O3 -std=c++17 1.2_hello_world.cu -o 1.2_hello_world
 
 1.3_global_indices: 1.3_global_indices.cu ../common/cuda_helpers.h
 	nvcc -O3 -std=c++17 1.3_global_indices.cu -o 1.3_global_indices
