@@ -1,0 +1,10 @@
+[submodule "projects/cm1lp/code"]
+	path = projects/cm1lp/code
+	url = https://github.com/RichterLab/CM1LP.git
+	branch = codex-branch
+[submodule "projects/mfdn-transitions/code"]
+	path = projects/mfdn-transitions/code
+	url = https://github.com/nd-nuclear-theory/mfdn-transitions.git
+[submodule "projects/gbcf-nf-core-rnaseq/code"]
+	path = projects/gbcf-nf-core-rnaseq/code
+	url = https://github.com/nf-core/rnaseq.git

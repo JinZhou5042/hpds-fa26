@@ -1,0 +1,39 @@
+Loading CRC_default/1.1
+Loading R/4.4.0/gcc/11.5.0
+  Loading requirement: ompi/5.0.9/gcc/11.5.0
+read_table                        1.879 s
+write_depth_csv                   0.624 s
+allele_frequency                  7.380 s
+depth_filter                      0.022 s
+write_af_csv                      1.370 s
+mad_filter                      134.063 s
+write_filter_csv                  1.188 s
+No id variables; using all as measure variables
+summary                           0.656 s
+tricube_smoothing                 3.105 s
+write_tricube_csv                 2.578 s
+plot                              2.341 s
+total                           155.206 s
+	Command being timed: "Rscript run-bsa.R BSA6.1.multi.MAL31xKH004.SNP.filter.table source/BSA_OPTIMISATION_MAL_KH validation/baseline-recheck"
+	User time (seconds): 155.70
+	System time (seconds): 0.57
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:40.14
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 586836
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 181
+	Minor (reclaiming a frame) page faults: 486747
+	Voluntary context switches: 4834
+	Involuntary context switches: 308
+	Swaps: 0
+	File system inputs: 90952
+	File system outputs: 128264
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

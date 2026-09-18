@@ -1,0 +1,12 @@
+"stage","elapsed_s"
+"read_table",3.126
+"write_depth_csv",0.451
+"allele_frequency",9.748
+"depth_filter",0.032
+"write_af_csv",1.195
+"mad_filter",159.42
+"write_filter_csv",1.00700000000001
+"summary",1.30099999999999
+"tricube_smoothing",3.69200000000001
+"write_tricube_csv",2.179
+"plot",2.67200000000003

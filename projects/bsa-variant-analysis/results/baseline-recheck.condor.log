@@ -1,0 +1,38 @@
+000 (401943.000.000) 2026-09-16 13:22:07 Job submitted from host: <10.32.88.70:9618?addrs=10.32.88.70-9618&alias=condorfe.crc.nd.edu&noUDP&sock=schedd_3075_c5d0>
+...
+001 (401943.000.000) 2026-09-16 13:22:08 Job executing on host: <10.32.89.233:9618?addrs=10.32.89.233-9618&alias=d32cepyc057.crc.nd.edu&noUDP&sock=startd_2773_a036>
+	SlotName: slot1_11@d32cepyc057.crc.nd.edu
+	CondorScratchDir = "/var/condor/execute/dir_2880650"
+	Cpus = 1
+	Disk = 2098176
+	GPUs = 0
+	Memory = 4096
+...
+006 (401943.000.000) 2026-09-16 13:22:17 Image size of job updated: 530752
+	514  -  MemoryUsage of job (MB)
+	525560  -  ResidentSetSize of job (KB)
+...
+006 (401943.000.000) 2026-09-16 13:24:49 Image size of job updated: 715248
+	514  -  MemoryUsage of job (MB)
+	525560  -  ResidentSetSize of job (KB)
+...
+005 (401943.000.000) 2026-09-16 13:24:49 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:02:35, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:02:35, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.99        1         1 
+	   Disk (KB)            :     1     2097152   2098176 
+	   GPUs                 :                           0 
+	   Memory (MB)          :   514        4096      4096 
+	   TimeExecute (s)      :   161                       
+	   TimeSlotBusy (s)     :   161                       
+
+	Job terminated of its own accord at 2026-09-16T17:24:49Z with exit-code 0.
+...

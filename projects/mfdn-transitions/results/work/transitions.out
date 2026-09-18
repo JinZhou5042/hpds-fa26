@@ -1,0 +1,60 @@
+ 
+   Output from MFDn Transitions in M-scheme basis
+ 
+  Total number of particles            6
+  Number of protons  <bra| and |ket>           3           3
+  Number of neutrons <bra| and |ket>           3           3
+ 
+  Parity         <bra| and |ket>           1           1
+  Projection M_J <bra| and |ket>   1.000000       1.000000    
+ 
+  Number of |bra> states            1
+  Total spin J, n(J), wfn(n) |bra>   1.000000               1           1
+  Number of |ket> states            1
+  Total spin J, n(J), wfn(n) |ket>   1.000000               1           1
+ 
+  Calculation Reduced One-Body Density Matrix Elements
+    Lower limit on K           0
+    Upper limit on K           2
+ 
+    Number of proton OBDMEs           92
+    Number of neutron OBDMEs          92
+ 
+  Calculation Matrix Elements for Two-Body Operators
+ 
+  Spin of Operator           0
+   M_J of Operator           0
+   Parity of Oprtr           1
+ 
+  Number of MPI ranks                      4
+  Number of submatrices per rank           1
+  Not quite balanced number of MPI ranks
+ 
+  Number of OMP threads per rank           8
+ 
+ Reduced OBDMs written to file for
+   K =            0
+   K =            1
+   K =            2
+ 
+ OBDM observables
+  J <bra|      1.000000    
+  n <bra|              1
+ 
+  |ket> J   n(J)    <bra || OBop || ket> 
+ Reduced M1 transition matrix elements (orbital p, n; spin p, n)
+     1.0       1      0.0382      0.0427      0.5582      0.5577
+ 
+ Reduced E2 transition matrix elements (proton, neutron)
+     1.0       1      0.1288      0.1261
+ 
+  J operator           0
+ TBMEfilename = ../data/identity_h2v15099
+ TBMEfilename = ../data/Tintr_h2v15099
+ 
+  J <bra|      1.000000    
+  n(J) <bra|           1
+ 
+  |ket> J    n(J)  W3J(Jbra,Jop,Jket)  <bra | TBMEfile | ket> 
+     1.0       1    0.577350E+00     0.10000E+01     0.75170E+02
+ 

@@ -1,0 +1,26 @@
+#!/bin/bash
+#$ -N bsa-baseline
+#$ -q long
+#$ -pe smp 1
+#$ -cwd
+#$ -j y
+#$ -o results/baseline.log
+
+# Submit from this directory on crcfe01/crcfe02:  qsub run-bsa.sge
+# The workflow is single-threaded R, so one slot is requested.
+
+set -euo pipefail
+project_dir=${SGE_O_WORKDIR:?submit from the BSA project directory}
+cd "$project_dir"
+module load R/4.4.0/gcc/11.5.0
+export R_LIBS_USER="$PWD/.R-library"
+export OMP_NUM_THREADS="${NSLOTS:-1}"
+
+echo "host=$(hostname) start=$(date -Is) nslots=${NSLOTS:-1}"
+echo "source_revision=$(git -C code/upstream rev-parse HEAD)"
+sha256sum data/BSA6.1.multi.MAL31xKH004.SNP.filter.table
+/usr/bin/time -v Rscript scripts/run-bsa.R \
+      data/BSA6.1.multi.MAL31xKH004.SNP.filter.table \
+      code/upstream/BSA_OPTIMISATION_MAL_KH results/baseline
+(cd results/baseline && sha256sum *.csv > SHA256SUMS)
+echo "end=$(date -Is)"

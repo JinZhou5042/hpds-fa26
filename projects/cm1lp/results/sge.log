@@ -1,0 +1,17 @@
+Loading CRC_default/1.1
+Loading CRC_default/1.1
+job_id=1398110
+start_time=2026-08-31T10:48:58-04:00
+submit_host=x86_64-conda-linux-gnu
+execution_host=d32cepyc207.crc.nd.edu
+run_dir=/groups/dthain/users/jzhou24/hpds-fa26/project-list/cm1lp/baseline-20260831/run
+nslots=128
+Currently Loaded Modulefiles:
+ 1) intel/24.2   2) intelmpi/21.13   3) netcdf/4.9.2/intel/24.2(default)  
+
+Key:
+(symbolic-version)  
+launch_time=2026-08-31T10:48:59-04:00
+finish_time=2026-08-31T11:06:12-04:00
+cm1_exit_status=0
+Loading CRC_default/1.1

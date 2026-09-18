@@ -1,0 +1,8 @@
+$DEBUG_L is []
+$USE_MPI_L is []
+$FC is [f77]
+$OPTS is []
+$CPP is []
+$OMP is []
+$DM is []
+rm -f *.f90 *.o *.a *.mod

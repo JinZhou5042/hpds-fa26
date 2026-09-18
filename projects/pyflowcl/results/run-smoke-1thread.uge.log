@@ -1,0 +1,25 @@
+Loading CRC_default/1.1
+Loading CRC_default/1.1
+Loading python/3.12.13
+  Loading requirement: tcl/8.6.17
+host=d12chas323.crc.nd.edu OMP_NUM_THREADS=1 NX1=256 NX2=256 NSTEPS=100
+/groups/dthain/users/jzhou24/hpds-fa26/project-list/pyflowcl/env/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+CUDA not available; using CPU
+Initial CFL = 2.214e-01, DN = 1.035e-04
+iter    time        CFL     max ρ      max u      max v      max T    
+     0  0.0000e+00  0.2214  1.000e+00  1.100e+00  1.000e-01  2.500e+00, time=  0.010
+/groups/dthain/users/jzhou24/hpds-fa26/project-list/pyflowcl/env/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+    10  5.0000e-01  0.2229  1.031e+00  1.149e+00  1.479e-01  2.536e+00, time=  3.637
+    20  1.0000e+00  0.2229  1.028e+00  1.143e+00  1.655e-01  2.535e+00, time=  3.524
+    30  1.5000e+00  0.2230  1.038e+00  1.145e+00  1.456e-01  2.537e+00, time=  3.512
+    40  2.0000e+00  0.2230  1.033e+00  1.131e+00  1.619e-01  2.537e+00, time=  3.491
+    50  2.5000e+00  0.2227  1.030e+00  1.149e+00  1.692e-01  2.529e+00, time=  3.477
+    60  3.0000e+00  0.2230  1.029e+00  1.141e+00  1.738e-01  2.538e+00, time=  3.476
+    70  3.5000e+00  0.2234  1.033e+00  1.130e+00  1.621e-01  2.546e+00, time=  3.470
+    80  4.0000e+00  0.2230  1.028e+00  1.136e+00  1.977e-01  2.537e+00, time=  3.475
+    90  4.5000e+00  0.2228  1.029e+00  1.134e+00  2.026e-01  2.534e+00, time=  3.470
+   100  5.0000e+00  0.2230  1.030e+00  1.131e+00  2.285e-01  2.536e+00, time=  3.469
+Done solving, elapsed= 31.86280
+Loading CRC_default/1.1

@@ -1,0 +1,26 @@
+&transition_data
+
+! bra
+infofilename_bra = '../data/Z3-N3-Daejeon16-coul1-hw15.000-a_cm50-Nmax02-Mj1.0-lan600-tol1.0e-06/mfdn_smwf.info',
+basisfilename_bra = '../data/Z3-N3-Daejeon16-coul1-hw15.000-a_cm50-Nmax02-Mj1.0-lan600-tol1.0e-06/mfdn_MBgroups',
+smwffilename_bra = '../data/Z3-N3-Daejeon16-coul1-hw15.000-a_cm50-Nmax02-Mj1.0-lan600-tol1.0e-06/mfdn_smwf',
+TwoJ_bra = 2,
+n_bra = 1,
+
+! ket
+infofilename_ket = '../data/Z3-N3-Daejeon16-coul1-hw15.000-a_cm50-Nmax02-Mj1.0-lan600-tol1.0e-06/mfdn_smwf.info',
+basisfilename_ket = '../data/Z3-N3-Daejeon16-coul1-hw15.000-a_cm50-Nmax02-Mj1.0-lan600-tol1.0e-06/mfdn_MBgroups',
+smwffilename_ket = '../data/Z3-N3-Daejeon16-coul1-hw15.000-a_cm50-Nmax02-Mj1.0-lan600-tol1.0e-06/mfdn_smwf',
+TwoJ_ket(1) = 2,
+n_ket(1) = 1,
+
+! ob densities
+obdme = .true.,
+max2K = 4,
+hbomeg = 15,
+
+! tb operators
+numTBtrans = 2,
+TBMEoperators(1) = '../data/identity_h2v15099',
+TBMEoperators(2) = '../data/Tintr_h2v15099',
+/

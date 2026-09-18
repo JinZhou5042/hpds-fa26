@@ -1,0 +1,5 @@
+Currently Loaded Modulefiles:
+ 1) intel/24.2   2) intelmpi/21.13   3) netcdf/4.9.2/intel/24.2(default)  
+
+Key:
+(symbolic-version)  
