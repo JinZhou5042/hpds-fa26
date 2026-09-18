@@ -35,7 +35,7 @@ three submodules are pinned to the revisions used for validation. PyFlowCL is
 included directly because the supplied snapshot has no public upstream URL.
 
 The QTL VCF exceeds GitHub's per-file limit even after gzip compression. It is
-stored as two checked, lossless parts under `qtl-workflow/data/`; run
+stored as two checked, lossless parts under `qtl-workflow/data/`. Run
 `qtl-workflow/scripts/restore-vcf.sh` to reconstruct the original VCF.
 
 Bharat Mishra has several interesting large datasets for the GBCF nf-core
