@@ -9,9 +9,8 @@ collected:
 - Link to code.
 - Link to dataset, or instructions if needed.
 
-This directory keeps that material together: source reference, available
-input data, reproducible scripts, and a small set of baseline results per
-project.
+Each project folder keeps the source code, input data, scripts, and baseline
+results together.
 
 Clone the course repository with its pinned upstream code:
 
@@ -57,18 +56,18 @@ git submodule update --init --recursive
   Name: QTL Workflow
   Purpose: Genetic linkage mapping (QTL) and mutation search in LOD intervals. R (`qtl` / `rqtl2`).
   Link to code: owner-supplied `ClassCode/QTL_Code.R`
-  Link to dataset: owner-supplied CSV. Minimal run and 1000-permutation run both work, chromosome 7 peak confirmed by Tarrick as expected for chloroquine. Scope still to choose: modernize to `rqtl2`, or parallelize VCF/gene-interval processing (internal decision, not blocked on Tarrick).
+  Link to dataset: owner-supplied CSV. Minimal run and 1000-permutation run both work, chromosome 7 peak confirmed by Tarrick as expected for chloroquine. Still deciding whether to modernize to `rqtl2` or parallelize VCF/gene-interval processing, our call, not something we're waiting on Tarrick for.
 
 - Contact: Bharat Mishra (`bmishra2@nd.edu`)
   Name: GBCF nf-core RNA-seq
   Purpose: NGS pipeline performance, scheduling, and scaling on CRC.
   Link to code: https://github.com/nf-core/rnaseq (3.26.0, commit `e7ca462`)
   Link to dataset: built-in `test` profile only so far (smoke test, ~25 MB), runs end to end on Grid Engine and HTCondor. Bharat has several interesting large datasets and will share one via the CRC shared file system when ready. A specific performance question still needs to come from him.
-  Note: FreeCount and Amplicon Explorer (the two smaller GBCF Shiny apps Bharat also offered) were dropped as candidates. Both are thin, similar-shaped R/Shiny stats apps with little real HPC/scaling story, and keeping only nf-core avoids overloading Bharat with three separate student groups.
+  Note: dropped Bharat's other two offers, FreeCount and Amplicon Explorer. They're both thin R/Shiny stats apps with little real HPC story, and sticking with just nf-core keeps us from splitting Bharat across three student groups.
 
-GitHub-hosted upstream projects are referenced rather than duplicated. The
-three submodules are pinned to the revisions used for validation. PyFlowCL is
-included directly because the supplied snapshot has no public upstream URL.
+GitHub-hosted upstream projects are referenced, not duplicated. The three
+submodules are pinned to the revisions we tested. PyFlowCL is included
+directly since it has no public upstream URL.
 
 The QTL VCF exceeds GitHub's per-file limit even after gzip compression. It is
 stored as two checked, lossless parts under `qtl-workflow/data/`. Run
@@ -109,7 +108,7 @@ stored as two checked, lossless parts under `qtl-workflow/data/`. Run
   Purpose: High-performance topological data analysis.
   Link to code: not yet received
   Link to dataset: not yet received
-  Status: same silence as Subgraph Isomorphism. Also still exploratory (no concrete implementation identified yet).
+  Status: same silence as Subgraph Isomorphism, and still exploratory, no concrete implementation picked yet.
 
 ## Not yet a concrete candidate
 
