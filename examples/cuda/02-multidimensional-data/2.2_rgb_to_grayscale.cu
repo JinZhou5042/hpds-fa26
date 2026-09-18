@@ -1,8 +1,15 @@
 /*
- * From this topic directory:
+ * From this topic directory (see ../README.md for details).
+ *
+ * HTCondor (Notre Dame CRC): build on the front end, run on a GPU worker
  *   module load cuda/12.1
  *   make 2.2_rgb_to_grayscale
  *   ./2.2_rgb_to_grayscale bird.png bird_grayscale.png
+ *
+ * Slurm (Purdue Anvil): build on the login node, run with sbatch
+ *   module load modtree/gpu cuda/12.8.0
+ *   make 2.2_rgb_to_grayscale
+ *   sbatch ../common/anvil_gpu.slurm ./2.2_rgb_to_grayscale bird.png bird_grayscale.png
  *
  * Section 2.2: Convert an RGB PNG to grayscale
  *

@@ -1,8 +1,15 @@
 /*
- * From this topic directory:
+ * From this topic directory (see ../README.md for details).
+ *
+ * HTCondor (Notre Dame CRC): build on the front end, run on a GPU worker
  *   module load cuda/12.1
  *   make overall
  *   ./overall
+ *
+ * Slurm (Purdue Anvil): build on the login node, run with sbatch
+ *   module load modtree/gpu cuda/12.8.0
+ *   make overall
+ *   sbatch ../common/anvil_gpu.slurm ./overall
  *
  * Overall program: Naive versus tiled matrix multiplication
  *

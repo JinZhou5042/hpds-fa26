@@ -1,8 +1,15 @@
 /*
- * From this topic directory:
+ * From this topic directory (see ../README.md for details).
+ *
+ * HTCondor (Notre Dame CRC): build on the front end, run on a GPU worker
  *   module load cuda/12.1
  *   make 3.4_warps_and_divergence
  *   ./3.4_warps_and_divergence
+ *
+ * Slurm (Purdue Anvil): build on the login node, run with sbatch
+ *   module load modtree/gpu cuda/12.8.0
+ *   make 3.4_warps_and_divergence
+ *   sbatch ../common/anvil_gpu.slurm ./3.4_warps_and_divergence
  *
  * Section 3.4: Warps, SIMD execution, and control divergence
  *

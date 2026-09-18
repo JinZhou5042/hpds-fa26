@@ -1,8 +1,15 @@
 /*
- * From this topic directory:
+ * From this topic directory (see ../README.md for details).
+ *
+ * HTCondor (Notre Dame CRC): build on the front end, run on a GPU worker
  *   module load cuda/12.1
  *   make 1.7_function_qualifiers
  *   ./1.7_function_qualifiers
+ *
+ * Slurm (Purdue Anvil): build on the login node, run with sbatch
+ *   module load modtree/gpu cuda/12.8.0
+ *   make 1.7_function_qualifiers
+ *   sbatch ../common/anvil_gpu.slurm ./1.7_function_qualifiers
  *
  * Section 1.7: Function qualifiers, compilation, and error visibility
  *
