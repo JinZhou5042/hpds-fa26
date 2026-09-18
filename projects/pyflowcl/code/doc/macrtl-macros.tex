@@ -1,0 +1,309 @@
+
+%%%%%%% CODES
+
+\newcommand{\code}{\textit{PyFlowCL}}
+\newcommand{\NGA}{\textit{NGA}}
+\newcommand{\PlasComCM}{\textit{PlasComCM}}
+\newcommand{\PlasComCMtwo}{\textit{PlasCom2}}
+\newcommand{\goldenCopy}{\textit{golden copy}}
+\newcommand{\GoldenCopy}{\textit{Golden Copy}}
+\newcommand{\cl}[1]{\textit{codelet-#1}}
+\newcommand{\Cl}[1]{\textit{Codelet-#1}}
+\newcommand{\plusplus}[1]{#1{}\texttt{++}}
+
+
+\newcommand{\Q}[1]{{\medskip\small\noindent\color{red}#1\par}}
+
+%%%%%%% ANIMATIONS
+\newcommand{\insertmovie}[3]{\ifmovies{
+\movie[autostart,loop]
+{\includegraphics[width=#1\textwidth]{Movies/#2}}
+{Movies/#3}
+}
+\else{
+\includegraphics[width=#1\textwidth]{Movies/#2}
+}
+\fi
+}
+
+
+%%%%%%%%% COLORS
+%\definecolor{myBlue}{RGB}{19,41,75}  %%% ILLINOIS BLUE
+\definecolor{myBlueLink}{RGB}{70,70,200}  %%% ILLINOIS BLUE
+\definecolor{myBlue}{RGB}{18,28,43}  %%% ND BLUE
+\definecolor{myOrange}{RGB}{26,82,126} % monochromatic lighter
+%\definecolor{myOrange}{RGB}{232,74,39}  % IL orange
+\definecolor{IllinoisOrange}{RGB}{232,74,39}  %%% ILLINOIS ORANGE
+\definecolor{IllinoisBlue}{RGB}{19,41,75}   %%% ILLINOIS BLUE
+\definecolor{mainText}{RGB}{18,28,43}  %%% ND BLUE
+%\definecolor{mainText}{RGB}{19,41,75}  %%% ILLINOIS BLUE
+
+\definecolor{ForestGreen}{rgb}{0.0, 0.2, 0.13}
+\definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.24}
+\definecolor{antiquewhite}{rgb}{0.98, 0.92, 0.84}
+
+\newcommand{\makeRed}[1]{{\color{red} #1}}
+
+
+%%%%%%%%% COMMENTS/INSTRUCTIONS/NOTES
+\newcommand{\instr}[1]{{\color{red}\footnotesize #1}}
+\newenvironment{notes}{\color{red}\footnotesize \begin{center}\begin{minipage}{0.8\textwidth}}{\end{minipage}\end{center}}
+\newcommand{\CHK}{{\color{red}CHK???}}
+\newcommand{\CHKCS}{{\color{Green}CHK CS ???}}
+
+
+%%%%%%%%% FORMATTING
+\captionsetup{labelfont={color=myOrange,bf},textfont={color=myBlue}}
+\newcommand{\HRule}[2]{{\color{myOrange}\rule{#1}{#2}}}
+\newcommand{\tPI}[1]{{\color{myOrange}#1}}
+\newcommand{\ttPI}[1]{\texttt{\color{myOrange}#1}}
+\newcommand{\sPI}[1]{\textsc{\color{myOrange}#1}}
+\newcommand{\cPI}[1]{\textbf{\color{myOrange}#1}}
+\newcommand{\rPI}[1]{\textrm{\color{myOrange}#1}}
+\newcommand{\iPI}[1]{\textit{\color{myOrange}#1}}
+\newcommand{\lead}[1]{\textit{\color{myOrange}(#1)}}
+\newcommand{\tabtit}[1]{\textsc{\color{myOrange}#1}}
+\newcommand{\entry}[1]{\mbox{\sffamily\bfseries{#1:}}\hfil}%
+\newcommand{\bitem}{\item[{\color{myOrange}$\bullet$}]}
+\newcommand{\oitem}{\item[{\color{myOrange}$\circ$}]}
+\newcommand{\cditem}{\item[{\color{myOrange}$\cdot$}]}
+\newcommand{\bmath}{\boldsymbol}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Dpartial}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\itemcolor}[1]{% Update list item colour
+\renewcommand{\makelabel}[1]{\color{#1}\hfil ##1}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\gdotfill}{{\color{gray}\dotfill}}
+\newcommand{\bvec}[1]{\ensuremath{\boldsymbol{#1}}}
+\newcommand{\matrd}[1]{\ensuremath{\mathsf{#1}}}
+\newcommand{\cs}[1]{\textcolor{IllinoisOrange}{\texttt{#1}}}
+%\newcommand{\parab}[2]{\vspace{#1 pt}\noindent \paragraph{\bf #2 \\}}
+
+
+
+
+\def \d {\mathrm{d}}
+\def \dd#1#2{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
+\def \pp#1#2{\frac{\partial #1}{\partial #2}}
+\newcommand{\dprime}[1]{^{\prime\prime #1}}
+\newcommand{\sprime}[1]{^{\prime #1}}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\oll}[1]{\overline{#1}_\lambda}
+\newcommand{\wtl}[1]{\widetilde{#1}_\lambda}
+\newcommand{\wh}[1]{\widehat{#1}}
+\newcommand{\avg}[1]{\left\{ {#1} \right\}}
+\newcommand{\avgunw}[1]{\left\langle {#1} \right\rangle}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bg}{\mathbf{g}}
+\newcommand{\bbf}{\mathbf{f}}
+\newcommand{\bh}{\mathbf{h}}
+
+\def \avgrho {\avgunw{\rho}}
+\newcommand{\olu}{\overline{u}}
+\newcommand{\olbu}{\overline{\mathbf{u}}}
+\newcommand{\olxi}{\overline{\xi}}
+\newcommand{\olrho}{\overline{\rho}}
+
+\newcommand{\wtu}{\widetilde{u}}
+\newcommand{\wtbu}{\widetilde{\mathbf{u}}}
+
+\newcommand{\DNSsub}{{\text{\textsc{dns}}}}
+\newcommand{\LESsub}{{\text{\textsc{les}}}}
+\newcommand{\SGSsub}{{\text{\textsc{sgs}}}}
+
+\newcommand{\la}{\left \langle}
+\newcommand{\ra}{\right\rangle}
+
+\newcommand{\cb}[1]{{\color{blue} #1}}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+
+\def \Da {\mathrm{Da}}
+\def \Dad {\mathrm{Da}_\Delta}
+\def \Ka {\mathrm{Ka}}
+\def \Kaf {\mathrm{Ka}_{\avg{C}=0.5}}
+\def \Kacr {\mathrm{Ka}_\mathrm{cr}}
+\def \Rey {\mathrm{Re}}
+\def \Ma {\mathrm{Ma}}
+\def \Pr {\mathrm{Pr}}
+\def \Sc {\mathrm{Sc}}
+\def \HtwoO {{\mathrm{H}_2\mathrm{O}}}
+
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\vbbm}{{\vec{m}}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbV}{\mathbb{V}}
+
+\newcommand{\vD}{{\vec D}}
+\newcommand{\vhD}{{\hat{D}}}
+\newcommand{\vg}{{\vec g}}
+\newcommand{\vphi}{{\vec\phi}}
+\newcommand{\vtheta}{{\vec\theta}}
+\newcommand{\vOmega}{{\vec\Omega}}
+
+\newcommand{\vF}{{\vec{F}}}
+\newcommand{\vf}{{\vec{f}}}
+\newcommand{\vb}{{\vec{b}}}
+\newcommand{\vq}{{\vec{q}}}
+\newcommand{\vqs}{{\vec{q}^{\,\color{red}*}}}
+
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cO}{\mathcal{O}}
+
+\newcommand{\rstar}{{\color{red}*}}
+\newcommand{\rchk}{{\color{red} \checkmark}}
+\newcommand{\gchk}{{\color{green} \checkmark}}
+\newcommand{\rbul}{{\color{red} $\bullet$}}
+\newcommand{\pbul}{{\color{myOrange} $\bullet$}}
+\newcommand{\ro}{{\color{red} $\circ$}}
+
+\newcommand{\rhoi}[1][i]{\rho_{#1}}
+\newcommand{\dt}[1][t]{\partial_{#1}}
+\newcommand{\dx}[1][{\textrm{\bf x}}]{\boldsymbol \partial_{#1}}
+\newcommand{\Vi}[1][i]{\mathcal{V}_{#1}}
+\newcommand{\Mi}[1][\textswab{i}]{\mathcal{M}_{#1}}
+\newcommand{\omegai}[1][i]{\dot{\omega}_{#1}}
+\newcommand{\grav}{{\bf g}}
+\newcommand{\Etot}{\mathcal{E}}
+
+\newcommand{\mBG}{m_{\text{\tiny BG}}}
+\newcommand{\nBG}{n_{\text{\tiny BG}}}
+\newcommand{\nIp}{n_{\text{\tiny $I^+$}}}
+\newcommand{\nIm}{n_{\text{\tiny $I^-$}}}
+
+
+\newcommand{\bE}{{\mathbf{E}}}
+\newcommand{\bI}{{\mathbf{I}}}
+\newcommand{\bq}{{\mathbf{q}}}
+\newcommand{\bQ}{{\mathbf{Q}}}
+\newcommand{\bF}{{\mathbf{F}}}
+\newcommand{\olbq}{{\overline{\mathbf{q}}}}
+\newcommand{\btau}{{\boldsymbol{\tau}}}
+
+\newcommand{\bv}{{\bar{v}}}
+\newcommand{\bepsilon}{{\bar{\epsilon}}}
+
+\newcommand{\ST}{{S_{\text{\tiny T}}}}
+
+\newcommand{\vu}{\vec{u}}
+\newcommand{\vQ}{\vec{Q}}
+\newcommand{\veta}{\vec{\eta}}
+
+\newcommand{\TODO}[1]{{\color{pink} \tiny TODO: #1}}
+\newcommand{\mynote}[1]{{\color{green} \tiny #1}}
+\newcommand{\prj}[2]{{\color{gray} #1 [#2]}}
+
+\newcommand{\myoul}[1]{\color{myOrange}\underline{\smash{\color{pdcolor1} #1}}\color{pdcolor1}}
+\newcommand{\ccdot}{\color{myOrange}$\circ$\color{pdcolor1}\;}
+\newcommand{\cc}[1]{\color{myOrange}#1\color{pdcolor1}{}}
+
+
+% Grad, div, curl, etc.
+\newcommand{\vdot}{\mathop{\mbox{\boldmath{$\cdot$}}}}
+\newcommand{\vddot}{\mathop{\mbox{\textbf{:}}}}
+\newcommand{\bnabla}{\mbox{\boldmath{$\nabla$}}}
+\newcommand{\Lapl}{\nabla^2}
+\newcommand{\hLapl}{\nabla^2_{\!\mathrm{h}}}
+\newcommand{\pLapl}{\nabla^2_{\!\!\!\perp}}
+
+
+% Custom line colors for Gnuplot EPS+LaTeX terminal
+\definecolor{lc1}{HTML}{CE282A}
+\definecolor{lc2}{HTML}{255BCB}
+\definecolor{lc3}{HTML}{009647} %2DCE65}
+\definecolor{lc4}{HTML}{A21D8E}
+\definecolor{lc5}{HTML}{F1AB65}
+\definecolor{lc6}{HTML}{89B6D4}
+\definecolor{lc7}{HTML}{A0A0A0}
+
+
+
+
+
+%%%%%%%%% PAGE DIMENSIONS
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\footskip}{0.15in}
+\setlength{\textheight}{9.0in}
+\setlength{\headheight}{0.2in}
+\setlength{\headsep}{0.1in}
+
+%%%%%%%%%%% FLOAT MANAGEMENT
+ \renewcommand{\topfraction}{0.9}
+    \renewcommand{\bottomfraction}{0.8}
+    \setcounter{topnumber}{2}
+    \setcounter{bottomnumber}{2}
+    \setcounter{totalnumber}{4}     % 2 may work better
+    \setcounter{dbltopnumber}{2}    % for 2-column pages
+    \renewcommand{\dbltopfraction}{0.9}	% fit big float above 2-col. text
+    \renewcommand{\textfraction}{0.07}	% allow minimal text w. figs
+    \renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+    \renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
+
+%%%%%%%%%% PARAGRAPHING
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex}
+\renewcommand{\baselinestretch}{0.95}
+
+
+%%%%%%%%% SECTIONING STUFF
+\makeatletter
+\renewcommand{\section}{\@startsection
+{section}%
+{0}%
+{0mm}%
+{1\baselineskip}%
+{0.4\baselineskip}%
+{%\rule{\linewidth}{0.8pt}\\
+  \normalfont\Large\bfseries\color{myOrange}}}%
+\makeatother
+
+\makeatletter
+\renewcommand{\subsection}{\@startsection
+{subsection}%
+{1}%
+{0mm}%
+{1\baselineskip}%
+{0.4\baselineskip}%
+%{0.01\baselineskip}%
+{\normalfont\large\bfseries\color{myOrange}}}%
+\makeatother
+
+\makeatletter
+\renewcommand{\subsubsection}{\@startsection
+{subsubsection}%
+{1}%
+{0mm}%
+{-0.5\baselineskip}%
+{0.3\baselineskip}%
+%{-0.3\baselineskip}% removes newline
+{\normalfont\normalsize\itshape\centering\color{myOrange}}}%
+%{\normalfont\normalsize\itshape\color{myOrange}}}%
+\makeatother
+
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+
+
+\newcommand{\myhref}[2]{\href{#1}{{\color{myBlueLink} #2}}}
+
+\newenvironment{noinditemize}
+{\begin{itemize}[leftmargin=*,label=\color{myOrange}$\bullet$,itemsep=0in]\raggedright}
+{\end{itemize}}
+
+\newenvironment{tnoinditemize}
+{\begin{tiny}\begin{noinditemize}}
+{\end{noinditemize}\end{tiny}}
+
+
+\newcommand{\jfm}[1]{{\color{magenta}JFM: #1}}

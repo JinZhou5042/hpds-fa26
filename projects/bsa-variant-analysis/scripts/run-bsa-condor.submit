@@ -1,0 +1,19 @@
+universe = vanilla
+
+executable = scripts/run-bsa-condor.sh
+initialdir = .
+
+output = results/baseline-recheck.condor.out
+error = results/baseline-recheck.condor.err
+log = results/baseline-recheck.condor.log
+
+request_cpus = 1
+request_memory = 4GB
+request_disk = 2GB
+
+requirements = (OpSysMajorVer >= 9)
+should_transfer_files = no
+
++JobBatchName = "bsa-baseline-recheck"
+
+queue 1
