@@ -1,0 +1,20 @@
+universe = vanilla
+
+executable = scripts/run-test.sh
+initialdir = .
+
+arguments = results/test-run
+output = results/test-run.condor.out
+error = results/test-run.condor.err
+log = results/test-run.condor.log
+
+request_cpus = 8
+request_memory = 24GB
+request_disk = 10GB
+
+requirements = (OpSysMajorVer >= 9)
+should_transfer_files = no
+
++JobBatchName = "gbcf-rnaseq-test"
+
+queue 1

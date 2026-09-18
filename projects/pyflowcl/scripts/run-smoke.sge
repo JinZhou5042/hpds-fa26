@@ -1,0 +1,16 @@
+#!/bin/bash
+# Run the PyFlowCL 2D shear layer smoke test under Univa Grid Engine.
+# Submit from crcfe01.crc.nd.edu or crcfe02.crc.nd.edu:
+#
+#   cd projects/pyflowcl
+#   qsub scripts/run-smoke.sge
+
+#$ -N pyflowcl-smoke
+#$ -q long
+#$ -pe smp 8
+#$ -j y
+#$ -cwd
+#$ -o results/run-smoke.uge.log
+
+project_dir=${SGE_O_WORKDIR:?submit from the PyFlowCL project directory}
+exec "$project_dir/scripts/run-smoke.sh"

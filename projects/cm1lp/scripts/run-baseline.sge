@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Submit from the project directory: qsub scripts/run-baseline.sge
+#$ -cwd
+#$ -pe mpi-64 128
+#$ -N cm1lp_pi_verify
+#$ -j y
+#$ -o results/baseline.sge.log
+
+set -euo pipefail
+
+project_dir=${SGE_O_WORKDIR:?submit this job from the CM1LP project directory}
+run_dir="$project_dir/results/baseline-run"
+cm1_exe=${CM1_EXE:-"$project_dir/build/cm1.exe"}
+
+module purge
+module load intel/24.2 intelmpi/21.13 netcdf/4.9.2/intel/24.2
+
+test "${NSLOTS:-0}" -eq 128
+test -x "$cm1_exe"
+mkdir -p "$run_dir"
+cp "$cm1_exe" "$run_dir/cm1.exe"
+cp "$project_dir/data/namelist.input" "$run_dir/namelist.input"
+cd "$run_dir"
+
+echo "host=$(hostname -f) start=$(date --iso-8601=seconds) nslots=$NSLOTS"
+mpirun -np "$NSLOTS" ./cm1.exe > cm1out.log 2> cm1err.log
+echo "end=$(date --iso-8601=seconds)"

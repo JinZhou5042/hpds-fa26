@@ -1,0 +1,18 @@
+#!/bin/bash
+# Run the nf-core/rnaseq test profile under Univa Grid Engine.
+# Submit from crcfe01.crc.nd.edu or crcfe02.crc.nd.edu:
+#
+#   cd projects/gbcf-nf-core-rnaseq
+#   qsub scripts/rnaseq-test.sge
+#
+# Container images must already be cached; see prefetch-containers.sh.
+
+#$ -N gbcf-rnaseq-test
+#$ -q long
+#$ -pe smp 8
+#$ -j y
+#$ -cwd
+#$ -o results/test-run-sge.uge.log
+
+project_dir=${SGE_O_WORKDIR:?submit from the nf-core project directory}
+exec "$project_dir/scripts/run-test.sh" "$project_dir/results/test-run-sge"

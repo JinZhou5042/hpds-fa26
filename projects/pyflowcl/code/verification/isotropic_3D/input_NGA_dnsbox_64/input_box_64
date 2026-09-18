@@ -1,0 +1,94 @@
+# INITIALIZATION PARAMETERS ########################
+
+! Name
+Simulation :		isotropic turbulence
+
+! Grid and geometry
+nx :			64
+Domain size :		1.0
+
+! Turbulence initialization
+Spectrum form :		PP
+Energetic scale :	0.2312740
+Fluctuations :		1.0811790
+
+! Files
+Init config file :	config_dnsbox_64
+Init data file :	data_dnsbox_64.init
+
+Init processors along X : 1
+Init processors along Y : 1
+Init processors along Z : 1
+
+
+# RUNNING PARAMETERS ###############################
+! Files
+MPIIO fs : auto
+Configuration file :	config_dnsbox_64
+Data file to read :	data_dnsbox_64.init
+Data file to write :    data_output/data_dnsbox_64.1
+Data overwrite :   	0
+Data frequency :       	1e-2
+
+Data type :    		cold
+
+! Partitioning
+Processors along X :    2
+Processors along Y :    2
+Processors along Z :    1
+OpenMP threads :   	1
+
+! tigercpu performance
+!  8x8x8x 4 (N=2048) : 10 s/step
+
+! Properties
+Chemistry model :	none
+Density :		1.0
+Viscosity :		3.1250E-03
+Diffusivity :           0
+Temperature :           300
+
+! Subgrid Scale model
+Use SGS model :		.false.	!.true.
+SGS averaging : 	.none.	!Germano
+
+! Time advancement
+Timestep size :         1e-3
+CFL number :            0.8
+Subiterations :         2
+
+! End of simulation
+Maximum iterations :    1000
+Maximum time :          1000
+Maximum wall time :     4.8
+
+! Velocity
+Velocity conv scheme :  2
+Velocity visc scheme :  2
+Implicit directions :	xyz
+
+! Pressure
+Pressure solver :       GMRES
+Pressure precond :      PFMG
+Pressure cvg :          1.0e-10
+Pressure iterations :   300
+Pressure fft : 	    	.true.
+
+! Output
+!Output type :		   plane
+Output frequency :	   1e-2
+Plane orientation :	   yz
+Plane locations :	   0.04 0.08 0.12 0.16 0.20 0.24 0.28
+Plane xmin :	  	   0.0
+Plane xmax :		   0.01
+Plane ymin :	  	  -0.16
+Plane ymax :		   0.16
+Plane zmin :		  -0.16
+Plane zmax :		   0.16
+
+!Output type :           ensight-str-3D
+!Output frequency :      2e-2
+
+! Statistics
+!Statistics type :	3D
+!Statistics frequency : 	1e-1
