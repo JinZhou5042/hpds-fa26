@@ -7,9 +7,3 @@
   DOI `10.1109/HPEC62836.2024.10938488`.
 - Technical profile: subgraph-isomorphism codes and datasets previously used
   to compare an FPGA-oriented system with large conventional HPC systems.
-
-## Project packet
-
-Collect code and its license, datasets, build instructions, a representative
-example, expected output, target platform, baseline measurements, and a
-clearly scoped architectural or scaling question.

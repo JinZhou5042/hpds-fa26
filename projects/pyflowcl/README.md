@@ -79,9 +79,3 @@ are not bitwise identical.
 - Hypre pressure-Poisson solve in incompressible mode, including all-to-all
   communication and dominant solver cost. This applies to an incompressible
   branch, not to `master`.
-
-## Project packet
-
-Still to do: build parallel HDF5/h5py and test multi-rank MPI runs, choose a
-solver mode and a representative problem size, measure a baseline at that
-size, and settle on one deliberately bounded performance question with Jon.

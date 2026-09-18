@@ -36,7 +36,7 @@ git submodule update --init --recursive
 - Contact: Jon MacArt (`jmacart@nd.edu`)
   Name: [PyFlowCL](pyflowcl/)
   Purpose: Compressible/incompressible computational fluid dynamics. Python, MPI (mpi4py), PyTorch/GPU offload, selected C++ kernels.
-  Link to code: private repository, code shared by email (`master`, revision `98db688ae5f4`), included directly since it has no public upstream URL. Must stay out of the public course repo, access method for matched students still to be confirmed with Jon.
+  Link to code: private repository, code shared by email (`master`, revision `98db688ae5f4`), included directly since it has no public upstream URL. Must stay out of the public course repo. The student working on PyFlowCL will contact Jon directly once matched.
   Link to dataset: none needed for the 2D shear layer verification case (grid built in code), plus the included HDF5 input and three manuals.
   Scripts and baseline results: environment setup and a CPU-only smoke test, 1 vs 8 threads, done.
 

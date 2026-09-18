@@ -75,10 +75,3 @@ resumes the existing Nextflow session instead of starting over.
   `RESUME=1` to force resume.
 - `scripts/rnaseq-test.sge`, `scripts/rnaseq-test.submit`: batch jobs.
 - `scripts/nextflow.config`: lets reports overwrite on reruns.
-
-## Project packet
-
-Still needed from the owner: a representative dataset (or its CRC path) and
-reference genome, the matching pipeline parameters, expected results,
-data-access constraints, and a bounded performance question. Measure the
-baseline on that input before choosing a student optimization target.

@@ -8,12 +8,6 @@
   runs may consume terabytes of input and use hundreds of ranks; much of the
   work is nearly embarrassingly parallel with reductions.
 
-## Project packet
-
-Record the exact revision, compiler and library environment, small validation
-case, appropriately shareable production-scale input, expected outputs,
-baseline scaling, resource limits, and a bounded optimization objective.
-
 ## Running it
 
 The repository's included `example-transitions-01` case builds and runs on

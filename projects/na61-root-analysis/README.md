@@ -6,10 +6,3 @@
   (`lfields2@nd.edu`).
 - Technical profile: a C++ program built against ROOT reads a large data file,
   selects events, and produces spectra used downstream.
-
-## Project packet
-
-Collect the repository and revision, a legally and technically shareable
-representative ROOT dataset, data-access instructions, ROOT environment,
-typical command or shell script, expected output, baseline runtime, and the
-owner's view of the principal bottleneck.

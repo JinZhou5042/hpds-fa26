@@ -7,9 +7,3 @@
   DOI `10.1109/TKDE.2022.3147070`.
 - Technical profile: exploratory direction based on persistent-homology
   workloads being studied by a member of the Kogge group.
-
-## Project packet
-
-This direction requires a specific codebase, dataset, scientific question,
-reproducible baseline, owner, and performance objective before it is suitable
-for student matching.
