@@ -29,10 +29,8 @@
 
 #include "../common/cuda_helpers.h"
 
-#include <array>
-#include <cstdlib>
-#include <iostream>
-
+#include <stdlib.h>
+#include <stdio.h>
 
 __global__ void double_elements(const int* input, int* output, int element_count) {
     const int global_id = blockIdx.x * blockDim.x + threadIdx.x;
@@ -89,7 +87,7 @@ int main() {
 
     bool correct = true;
     for (int i = 0; i < element_count; ++i) {
-        std::cout << "input[" << i << "]=" << input_h[i] << " -> output[" << i << "]=" << output_h[i] << '\n';
+    	printf("input[%d]=%d -> output[%d] = %d\n",i,input_h[i],i,output_h[i]);
         correct = correct && output_h[i] == expected_h[i];
     }
 

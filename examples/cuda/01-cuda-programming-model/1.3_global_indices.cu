@@ -47,7 +47,8 @@ int main() {
     int block_size = 4;
     int block_count = (element_count + block_size - 1) / block_size;
 
-    std::cout << "Elements: " << element_count << '\n' << "Launch: " << block_count << " blocks x " << block_size << " threads = " << block_count * block_size << " threads\n";
+    printf("Elements: %d\n",element_count);
+    printf("Launch: %d blocks x %d threads = %d\n",block_count,block_size,block_count*block_size);
 
     show_element_mapping<<<block_count, block_size>>>(element_count);
     check_cuda(cudaGetLastError(), "launch show_element_mapping");

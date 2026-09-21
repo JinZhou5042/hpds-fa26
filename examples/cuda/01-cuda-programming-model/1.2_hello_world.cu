@@ -22,10 +22,8 @@
 
 #include "../common/cuda_helpers.h"
 
-#include <cstdio>
-#include <cstdlib>
-#include <iostream>
-
+#include <stdio.h>
+#include <stdlib.h>
 
 /*
  * __global__ means that main launches this function from the CPU and its body
@@ -40,10 +38,10 @@ __global__ void show_local_thread_id() {
 }
 
 int main() {
-    constexpr int block_count = 1;
-    constexpr int threads_per_block = 4;
+    int block_count = 1;
+    int threads_per_block = 4;
 
-    std::cout << "Launching one block with four threads\n";
+    printf("Launching one block with four threads\n");
 
     /*
      * The first launch value is the number of blocks. The second is the number

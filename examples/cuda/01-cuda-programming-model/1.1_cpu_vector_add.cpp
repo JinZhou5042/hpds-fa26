@@ -18,11 +18,10 @@
  * versions.
  */
 
-#include <cstddef>
-#include <iostream>
-#include <vector>
+#include <stdio.h>
+#include <stdlib.h>
 
-void vector_add_cpu(const float* a, const float* b, float* c, std::size_t n) {
+void vector_add_cpu(const float* a, const float* b, float* c, int n) {
     /*
      * a, b, and c are pointers. You can think of them as the starting
      * addresses of three arrays. The expression a[i] is equivalent to
@@ -33,15 +32,17 @@ void vector_add_cpu(const float* a, const float* b, float* c, std::size_t n) {
      * Statements such as a[i] = 1 are therefore rejected by the compiler.
      * c is not const because this function must write the output into it.
      *
-     * std::size_t is the unsigned integer type used by C++ for object sizes
+     * int is the unsigned integer type used by C++ for object sizes
      * and array indices. It can represent the largest object supported by the
      * current platform, which makes it a better choice than an arbitrary int.
      */
-    for (std::size_t i = 0; i < n; ++i) {
+    for (int i = 0; i < n; ++i) {
         // The CPU thread executes n iterations; iteration i computes C[i].
         c[i] = a[i] + b[i];
     }
 }
+
+#define SIZE 4
 
 int main() {
     /*
@@ -51,11 +52,10 @@ int main() {
      *
      * a and b are const, so the inputs cannot be changed after construction.
      */
-    const std::vector<float> a{1.0f, 2.0f, 3.0f, 4.0f};
-    const std::vector<float> b{10.0f, 20.0f, 30.0f, 40.0f};
+     const float a[SIZE] = {1.0f, 2.0f, 3.0f, 4.0f};
+     const float b[SIZE] = {10.0f, 20.0f, 30.0f, 40.0f};
 
-    // Supplying only a length value-initializes these float elements to 0.
-    std::vector<float> c(a.size());
+     float c[SIZE] = {0};
 
     /*
      * data() returns the address of the first element in the contiguous
@@ -66,11 +66,11 @@ int main() {
      * to memory owned by the caller. Writing through c directly changes the
      * caller's output vector.
      */
-    vector_add_cpu(a.data(), b.data(), c.data(), a.size());
+     vector_add_cpu(a,b,c,SIZE);
 
     // The expected values are 11, 22, 33, and 44.
-    for (std::size_t i = 0; i < c.size(); ++i) {
-        std::cout << "c[" << i << "] = " << c[i] << '\n';
+    for (int i = 0; i < SIZE; ++i) {
+	printf("c[%d] = %f\n",i,c[i]);
     }
 }
 

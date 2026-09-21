@@ -37,12 +37,9 @@
 
 #include "../common/cuda_helpers.h"
 
-#include <algorithm>
-#include <cmath>
-#include <cstddef>
-#include <cstdlib>
-#include <iostream>
-#include <vector>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #define SIZE 4
 
@@ -171,9 +168,11 @@ int main() {
     float max_abs_error = 0.0f;
 
     for (int i = 0; i < n; ++i) {
-        std::cout << "c[" << i << "] = " << c_h[i] << '\n';
+    	printf("c[%d] = %f\n",i,c_h[i]);
         max_abs_error = std::max(max_abs_error, std::fabs(c_h[i] - c_cpu[i]));
     }
-    std::cout << "Elements checked against CPU reference: " << n << '\n' << "Maximum absolute error: " << max_abs_error << '\n';
+    printf("Elements checked against CPU reference: %d\n",n);
+    printf("Maximum absolute error: %f\n",max_abs_error);
+
     return max_abs_error <= 1.0e-5f ? EXIT_SUCCESS : EXIT_FAILURE;
 }
