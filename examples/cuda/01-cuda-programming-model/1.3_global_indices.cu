@@ -43,9 +43,9 @@ __global__ void show_element_mapping(int element_count) {
 }
 
 int main() {
-    constexpr int element_count = 10;
-    constexpr int block_size = 4;
-    constexpr int block_count = (element_count + block_size - 1) / block_size;
+    int element_count = 10;
+    int block_size = 4;
+    int block_count = (element_count + block_size - 1) / block_size;
 
     std::cout << "Elements: " << element_count << '\n' << "Launch: " << block_count << " blocks x " << block_size << " threads = " << block_count * block_size << " threads\n";
 

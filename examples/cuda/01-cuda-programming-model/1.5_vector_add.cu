@@ -44,17 +44,15 @@
 #include <iostream>
 #include <vector>
 
+#define SIZE 4
 
-__global__ void vector_add_kernel(const float* a_d, const float* b_d, float* c_d, std::size_t n) {
+__global__ void vector_add_kernel(const float* a_d, const float* b_d, float* c_d, int n) {
     /*
      * Ordinary host code cannot dereference these device addresses, but a
      * kernel executing on the GPU can.
-     *
-     * Convert blockIdx.x to size_t before multiplication so a very large grid
-     * does not compute the intermediate product in a narrower integer type.
      * Every thread owns a private copy of the local variable i.
      */
-    const std::size_t i = static_cast<std::size_t>(blockIdx.x) * blockDim.x + threadIdx.x;
+    int i = (blockIdx.x) * blockDim.x + threadIdx.x;
 
     // A rounded-up grid has extra threads; only valid indices may touch arrays.
     if (i < n) {
@@ -68,8 +66,8 @@ __global__ void vector_add_kernel(const float* a_d, const float* b_d, float* c_d
     }
 }
 
-void vector_add_cpu(const float* a, const float* b, float* c, std::size_t n) {
-    for (std::size_t i = 0; i < n; ++i) {
+void vector_add_cpu(const float* a, const float* b, float* c, int n) {
+    for (int i = 0; i < n; ++i) {
         c[i] = a[i] + b[i];
     }
 }
@@ -79,16 +77,16 @@ int main() {
      * std::vector stores data in memory directly accessible to the CPU. N stays
      * at four so the result remains easy to verify by inspection.
      */
-    const std::vector<float> a_h{1.0f, 2.0f, 3.0f, 4.0f};
-    const std::vector<float> b_h{10.0f, 20.0f, 30.0f, 40.0f};
-    std::vector<float> c_h(a_h.size());
-    std::vector<float> c_cpu(a_h.size());
+     float a_h[SIZE] = {1.0f, 2.0f, 3.0f, 4.0f};
+     float b_h[SIZE] = {10.0f, 20.0f, 30.0f, 40.0f};
+     float c_h[SIZE];
+     float c_cpu[SIZE];
 
     // n counts elements; CUDA memory APIs require a count in bytes.
-    const std::size_t n = a_h.size();
-    const std::size_t bytes = n * sizeof(float);
+    const int n = SIZE;
+    const int bytes = n * sizeof(float);
 
-    vector_add_cpu(a_h.data(), b_h.data(), c_cpu.data(), n);
+    vector_add_cpu(a_h, b_h, c_cpu, n );
 
     /*
      * These three pointer variables live on the host, but after cudaMalloc they
@@ -110,9 +108,9 @@ int main() {
      * cudaMalloc allocates storage but does not initialize it. The contents of
      * c_d are undefined until the kernel writes them.
      */
-    check_cuda(cudaMalloc(reinterpret_cast<void**>(&a_d), bytes), "cudaMalloc A");
-    check_cuda(cudaMalloc(reinterpret_cast<void**>(&b_d), bytes), "cudaMalloc B");
-    check_cuda(cudaMalloc(reinterpret_cast<void**>(&c_d), bytes), "cudaMalloc C");
+    check_cuda(cudaMalloc((void**)(&a_d), bytes), "cudaMalloc A");
+    check_cuda(cudaMalloc((void**)(&b_d), bytes), "cudaMalloc B");
+    check_cuda(cudaMalloc((void**)(&c_d), bytes), "cudaMalloc C");
 
     /*
      * 2. Copy both inputs explicitly.
@@ -124,8 +122,8 @@ int main() {
      * There is no reason to copy c_h into c_d because the kernel overwrites
      * every valid output element.
      */
-    check_cuda(cudaMemcpy(a_d, a_h.data(), bytes, cudaMemcpyHostToDevice), "copy A host to device");
-    check_cuda(cudaMemcpy(b_d, b_h.data(), bytes, cudaMemcpyHostToDevice), "copy B host to device");
+    check_cuda(cudaMemcpy(a_d, a_h, bytes, cudaMemcpyHostToDevice), "copy A host to device");
+    check_cuda(cudaMemcpy(b_d, b_h, bytes, cudaMemcpyHostToDevice), "copy B host to device");
 
     /*
      * 3. Launch enough GPU threads.
@@ -138,9 +136,9 @@ int main() {
      * work; if(i<n) suppresses the other 252. This is wasteful for such a tiny
      * demonstration but semantically correct.
      */
-    const int block_size = 256;
-    const std::size_t grid_size = (n + block_size - 1) / block_size;
-    vector_add_kernel<<<static_cast<unsigned int>(grid_size), block_size>>>(a_d, b_d, c_d, n);
+    int block_size = 256;
+    int grid_size = (n + block_size - 1) / block_size;
+    vector_add_kernel<<<grid_size, block_size>>>(a_d, b_d, c_d, n);
 
     /*
      * A kernel launch normally returns asynchronously. cudaDeviceSynchronize()
@@ -157,7 +155,7 @@ int main() {
      * D2H copy is required. This cudaMemcpy call is synchronous with respect to
      * the host, so c_h is ready for CPU access when the call returns.
      */
-    check_cuda(cudaMemcpy(c_h.data(), c_d, bytes, cudaMemcpyDeviceToHost), "copy C device to host");
+    check_cuda(cudaMemcpy(c_h, c_d, bytes, cudaMemcpyDeviceToHost), "copy C device to host");
 
     /*
      * 5. Release GPU memory.
@@ -171,7 +169,8 @@ int main() {
     check_cuda(cudaFree(c_d), "cudaFree C");
 
     float max_abs_error = 0.0f;
-    for (std::size_t i = 0; i < n; ++i) {
+
+    for (int i = 0; i < n; ++i) {
         std::cout << "c[" << i << "] = " << c_h[i] << '\n';
         max_abs_error = std::max(max_abs_error, std::fabs(c_h[i] - c_cpu[i]));
     }

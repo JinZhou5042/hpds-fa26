@@ -48,39 +48,40 @@ void double_elements_cpu(const int* input, int* output, int element_count) {
 }
 
 int main() {
-    constexpr int element_count = 6;
-    constexpr int block_size = 4;
-    constexpr int block_count = (element_count + block_size - 1) / block_size;
-    constexpr std::size_t bytes = element_count * sizeof(int);
+    int element_count = 6;
+    int block_size = 4;
+    int block_count = (element_count + block_size - 1) / block_size;
+    int bytes = element_count * sizeof(int);
 
     /*
      * _h and _d are a common CUDA naming convention, not language syntax: _h
      * means host data and _d means a pointer containing a device address. The
      * suffixes improve readability; only CUDA API calls actually move data.
      */
-    const std::array<int, element_count> input_h = {3, 5, 8, 13, 21, 34};
-    std::array<int, element_count> output_h{};
-    std::array<int, element_count> expected_h{};
+    int input_h[6] = {3, 5, 8, 13, 21, 34};
+    int output_h[6];
+    int expected_h[6];
 
-    double_elements_cpu(input_h.data(), expected_h.data(), element_count);
-
+    double_elements_cpu(input_h, expected_h, element_count);
+    
     int* input_d = nullptr;
     int* output_d = nullptr;
 
     // Phase 1: allocate two arrays in device global memory.
-    check_cuda(cudaMalloc(reinterpret_cast<void**>(&input_d), bytes), "cudaMalloc input");
-    check_cuda(cudaMalloc(reinterpret_cast<void**>(&output_d), bytes), "cudaMalloc output");
+    check_cuda(cudaMalloc((void**)&input_d, bytes), "cudaMalloc input");
+    check_cuda(cudaMalloc((void**)&output_d, bytes), "cudaMalloc output");
 
     // Phase 2: copy the input array from host memory to device memory.
-    check_cuda(cudaMemcpy(input_d, input_h.data(), bytes, cudaMemcpyHostToDevice), "copy input H2D");
+    check_cuda(cudaMemcpy(input_d, input_h, bytes, cudaMemcpyHostToDevice), "copy input H2D");
 
     // Phase 3: launch enough threads to process every element.
     double_elements<<<block_count, block_size>>>(input_d, output_d, element_count);
+
     check_cuda(cudaGetLastError(), "launch double_elements");
     check_cuda(cudaDeviceSynchronize(), "execute double_elements");
 
     // Phase 4: copy the output array from device memory to host memory.
-    check_cuda(cudaMemcpy(output_h.data(), output_d, bytes, cudaMemcpyDeviceToHost), "copy output D2H");
+    check_cuda(cudaMemcpy(output_h, output_d, bytes, cudaMemcpyDeviceToHost), "copy output D2H");
 
     // Phase 5: release device memory after the CPU has received the result.
     check_cuda(cudaFree(input_d), "cudaFree input");
