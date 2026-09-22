@@ -69,16 +69,14 @@ void vector_add_cpu(const float* a, const float* b, float* c, int n) {
     }
 }
 
-int main() {
-    /*
-     * std::vector stores data in memory directly accessible to the CPU. N stays
-     * at four so the result remains easy to verify by inspection.
-     */
-     float a_h[SIZE] = {1.0f, 2.0f, 3.0f, 4.0f};
-     float b_h[SIZE] = {10.0f, 20.0f, 30.0f, 40.0f};
-     float c_h[SIZE];
-     float c_cpu[SIZE];
+/* Large arrays should be declared at global scope to avoid stack overflow. */
 
+float a_h[SIZE] = {1.0f, 2.0f, 3.0f, 4.0f};
+float b_h[SIZE] = {10.0f, 20.0f, 30.0f, 40.0f};
+float c_h[SIZE];
+float c_cpu[SIZE];
+
+int main() {
     // n counts elements; CUDA memory APIs require a count in bytes.
     const int n = SIZE;
     const int bytes = n * sizeof(float);
@@ -168,7 +166,7 @@ int main() {
     float max_abs_error = 0.0f;
 
     for (int i = 0; i < n; ++i) {
-    	printf("c[%d] = %f\n",i,c_h[i]);
+    	//printf("c[%d] = %f\n",i,c_h[i]);
         max_abs_error = std::max(max_abs_error, std::fabs(c_h[i] - c_cpu[i]));
     }
     printf("Elements checked against CPU reference: %d\n",n);
