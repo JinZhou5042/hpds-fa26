@@ -34,16 +34,16 @@
 #include <vector>
 
 
-void vector_add_cpu(const float* a, const float* b, float* c, std::size_t n) {
+void vector_add_cpu(const float* a, const float* b, float* c, int n) {
     // A simple CPU implementation provides an independently computed answer.
-    for (std::size_t i = 0; i < n; ++i) {
+    for (int i = 0; i < n; ++i) {
         c[i] = a[i] + b[i];
     }
 }
 
-__global__ void vector_add_kernel(const float* a_d, const float* b_d, float* c_d, std::size_t n) {
+__global__ void vector_add_kernel(const float* a_d, const float* b_d, float* c_d, int n) {
     // Flatten each thread's block-local identity into one global array index.
-    const std::size_t i = static_cast<std::size_t>(blockIdx.x) * blockDim.x + threadIdx.x;
+    const int i = blockIdx.x * blockDim.x + threadIdx.x;
 
     // Without this check, the final 21 threads would access beyond the arrays.
     if (i < n) {
@@ -63,10 +63,10 @@ int main() {
      * small launch in Section 1.3, it is a plausible practical block size, but this
      * does not establish that 128 is optimal.
      */
-    const std::size_t n = 1003;
+    const int n = 1003;
     const int block_size = 128;
-    const std::size_t grid_size = (n + block_size - 1) / block_size;
-    const std::size_t bytes = n * sizeof(float);
+    const int grid_size = (n + block_size - 1) / block_size;
+    const int bytes = n * sizeof(float);
 
     /*
      * Keep two distinct outputs:
@@ -77,36 +77,41 @@ int main() {
      * Printing only a few values could easily miss an error in the middle or at
      * the end of the array.
      */
-    std::vector<float> a_h(n);
-    std::vector<float> b_h(n);
-    std::vector<float> c_cpu(n);
-    std::vector<float> c_gpu(n);
+     float a_h[n];
+     float b_h[n];
+     float c_cpu[n];
+     float c_gpu[n];
 
     /*
      * Use deterministic rather than random inputs so every run reproduces the
      * same problem. i%17 varies B periodically without allowing values to grow
      * excessively large.
      */
-    for (std::size_t i = 0; i < n; ++i) {
-        a_h[i] = static_cast<float>(i) * 0.25f;
-        b_h[i] = static_cast<float>(i % 17) - 3.0f;
+    for (int i = 0; i < n; ++i) {
+        a_h[i] = (float)(i) * 0.25f;
+        b_h[i] = (float)(i % 17) - 3.0f;
     }
     // Produce the trusted host reference before beginning GPU work.
-    vector_add_cpu(a_h.data(), b_h.data(), c_cpu.data(), n);
+    vector_add_cpu(a_h, b_h, c_cpu, n);
 
     // This is Section 1.5's allocate -> H2D -> kernel -> D2H -> free sequence.
     float* a_d = nullptr;
     float* b_d = nullptr;
     float* c_d = nullptr;
-    check_cuda(cudaMalloc(reinterpret_cast<void**>(&a_d), bytes), "cudaMalloc A");
-    check_cuda(cudaMalloc(reinterpret_cast<void**>(&b_d), bytes), "cudaMalloc B");
-    check_cuda(cudaMalloc(reinterpret_cast<void**>(&c_d), bytes), "cudaMalloc C");
-    check_cuda(cudaMemcpy(a_d, a_h.data(), bytes, cudaMemcpyHostToDevice), "copy A host to device");
-    check_cuda(cudaMemcpy(b_d, b_h.data(), bytes, cudaMemcpyHostToDevice), "copy B host to device");
-    vector_add_kernel<<<static_cast<unsigned int>(grid_size), block_size>>>(a_d, b_d, c_d, n);
+
+    check_cuda(cudaMalloc((void**)(&a_d), bytes), "cudaMalloc A");
+    check_cuda(cudaMalloc((void**)(&b_d), bytes), "cudaMalloc B");
+    check_cuda(cudaMalloc((void**)(&c_d), bytes), "cudaMalloc C");
+
+    check_cuda(cudaMemcpy(a_d, a_h, bytes, cudaMemcpyHostToDevice), "copy A host to device");
+    check_cuda(cudaMemcpy(b_d, b_h, bytes, cudaMemcpyHostToDevice), "copy B host to device");
+
+    vector_add_kernel<<<grid_size, block_size>>>(a_d, b_d, c_d, n);
+
     check_cuda(cudaGetLastError(), "launch vector_add_kernel");
     check_cuda(cudaDeviceSynchronize(), "execute vector_add_kernel");
-    check_cuda(cudaMemcpy(c_gpu.data(), c_d, bytes, cudaMemcpyDeviceToHost), "copy C device to host");
+
+    check_cuda(cudaMemcpy(c_gpu, c_d, bytes, cudaMemcpyDeviceToHost), "copy C device to host");
 
     check_cuda(cudaFree(a_d), "cudaFree A");
     check_cuda(cudaFree(b_d), "cudaFree B");
@@ -125,13 +130,17 @@ int main() {
      * tolerance establishes a habit that generalizes to more complex kernels.
      */
     float max_abs_error = 0.0f;
-    for (std::size_t i = 0; i < n; ++i) {
+    for (int i = 0; i < n; ++i) {
         max_abs_error = std::max(max_abs_error, std::fabs(c_gpu[i] - c_cpu[i]));
     }
 
-    std::cout << "N: " << n << '\n' << "Block size: " << block_size << '\n' << "Grid size: " << grid_size << '\n' << "Threads launched: " << grid_size * block_size << '\n'
-              << "Unused threads in final block: " << grid_size * block_size - n << '\n'
-              << "Elements checked against CPU reference: " << n << '\n' << "Maximum absolute error: " << max_abs_error << '\n';
+    printf("N: %d\n",n);
+    printf("Block size: %d\n",block_size);
+    printf("Grid size: %d\n",grid_size);
+    printf("Threads launched: %d\n",grid_size*block_size);
+    printf("Unused threads in final block: %d\n",grid_size*block_size -n);
+    printf("Elements checked against CPU reference: %d\n",n);
+    printf("Maximum absolute error: %f\n",max_abs_error);
 
     /*
      * 1e-5 is a strict absolute tolerance for this input range. General numeric
