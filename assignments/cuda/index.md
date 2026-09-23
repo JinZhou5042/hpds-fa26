@@ -11,9 +11,10 @@ Be thoughtful in organizing your files and directories to keep track of everythi
 First review the [general instructions](../../general) for assignments.
 
 0 - Look up the available GPU devices and configurations available
-at the Notre Dame CRC and Purdue Anvil.  Dig down into the documentation
-to determine the GPU model, number of GPUs per machines, number of SMs,
-SM generation (e.g. Pascal, Turing, Ampere), and quantity of GPU RAM.
+at the Notre Dame CRC and Purdue Anvil. Dig down into the documentation
+to determine the GPU model and look up the corresponding datasheet.
+Report back on the number of GPUs per machinexs, number of cores per GPU,
+technology generation (e.g. Pascal, Turing, Ampere), and quantity of GPU RAM.
 
 1 - Explore the CUDA reference materials on the course web page.
 Select two advanced CUDA capabilities that we didn't discuss in class.
@@ -46,7 +47,8 @@ You may need to experiment to find the best thread block size.
 
 5 - Plot your results, including the sequential baseline and the two CUDA versions
 across the two facilities.
-Discuss the results, being sure to point out and explain any unexpected behaviors.
+Discuss your results, in light of the data collected in step one.
+Be sure to point out and explain any unexpected behaviors.
 Take some time to think through the most clear and insightful way to plot your
 data 
 
