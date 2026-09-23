@@ -21,7 +21,7 @@ Select two advanced CUDA capabilities that we didn't discuss in class.
 Describe each one in a paragraph that describes what it does,
 why it is interesting, and what sort of application might make use of it.
 
-2 - Explore the [sequential benchmarks](https://github.com/dthain/hpds-fa26/tree/main/examples/benchmarks) presented in class.  Select *three* benchmarks to evaluate in CUDA.  One must be chosen from (fractal,matrix) and the other from (heat,nbody).  For each benchmark, do the following:
+2 - Explore the [sequential benchmarks](https://github.com/dthain/hpds-fa26/tree/main/examples/benchmarks) presented in class.  Select *three* benchmarks to evaluate in CUDA.  One must be chosen from (fractal,matrix), one from (heat,nbody), and the third should be a completel different problem of interest to you.  For each benchmark, do the following:
 
 a - Establish a sequential baseline.  Read the code to understand the fundamental operation. Adjust SIZE, ITER, DELTAT so that the benchmark runs in about 60s on a single core.
 Make any adjustments needed to avoid excessive output.
@@ -35,7 +35,8 @@ in/out of the GPU on each iteration, so that your timing includes data movement.
 c - Create a third version of the benchmark that works the same as (b)
 but keeps all data in the GPU between iterations.  Allocate and copy memory
 and the beginning and end, but the GPU code should keep re-using data
-in GPU memory at each iteration.
+in GPU memory at each iteration.   Take any other steps you think are
+needed to improve performance.
 
 3 - Evaluate the performance of your benchmarks on the GPU devices available
 at the ND CRC for values of SIZE up to the maximum available GPU memory.
